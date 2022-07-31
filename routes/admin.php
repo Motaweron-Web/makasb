@@ -35,6 +35,14 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     Route::get('aboutUs','SettingController@aboutUs')->name('aboutUs.index');
     Route::post('updateAbout','SettingController@updateAbout')->name('aboutUs.update');
 
+
+    #### Admins ####
+    Route::resource('allPosts','AllPostsController');
+    Route::post('postDelete','AllPostsController@delete')->name('postDelete');
+    Route::post('deleteAllSites','AllPostsController@deleteAllSites')->name('deleteAllSites');
+    Route::post('siteActivation','AllPostsController@siteActivation')->name('siteActivation');
+
+
     #### Auth ####
     Route::get('logout', 'AuthController@logout')->name('admin.logout');
 });

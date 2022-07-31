@@ -8,6 +8,7 @@
     <i class="fa-solid fa-angle-up"></i>
 </div>
     @yield('content')
+@include('site/layouts/footer')
 @include('site/layouts/scripts')
 @toastr_js
 @toastr_render

@@ -48,5 +48,8 @@ $(document).ready(function () {
           behavior: "smooth",
         });
       });
+      $("#navbar-toggler").on("click" , function () {
+        $("header .navTop").toggleClass("active")
+      })
 })
 

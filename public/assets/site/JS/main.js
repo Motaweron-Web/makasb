@@ -43,11 +43,13 @@ $(document).ready(function () {
       $("header .nav2").addClass("active");
       $("header .navTop").addClass("active");
       $(".LogoNav2").addClass("active");
+      $(".ButtonsHeaderRE").addClass("active");
     } else {
       $("body").css("paddingTop", 0);
       $("header .nav2").removeClass("active");
       $("header .navTop").removeClass("active");
       $(".LogoNav2").removeClass("active");
+      $(".ButtonsHeaderRE").removeClass("active");
     }
   });
   $(window).on("load", function () {
@@ -109,4 +111,8 @@ $(document).ready(function () {
       $(this).delay(2000).fadeOut()
     })
   })
+  
 });
+
+
+

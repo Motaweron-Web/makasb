@@ -42,6 +42,13 @@
             </a>
         </li>
 
+        <li class="slide">
+            <a class="side-menu__item" href="{{route('allPosts.index')}}">
+                <i class="fe fe-at-sign side-menu__icon"></i>
+                <span class="side-menu__label">منشورات المستخدمين</span>
+            </a>
+        </li>
+
 
         <li class="slide">
             <a class="side-menu__item" href="{{route('admin.logout')}}">

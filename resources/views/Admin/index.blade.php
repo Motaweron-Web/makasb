@@ -1,6 +1,6 @@
 @extends('Admin/layouts/master')
 @section('title')
-    {{($setting->title) ?? 'لوحة التحكم'}} | الصفحة الرئيسية
+    {{($setting->title) ?? 'الصفحة الرئيسية'}} | لوحة التحكم
 @endsection
 @section('page_name')
     الرئـيسية

@@ -82,7 +82,17 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    flex-wrap: wrap !important;
+    /* flex-wrap: wrap !important; */
+  }
+  header .navTop.active {
+    box-shadow: 0px 2px 5px rgba(66, 66, 66, 0.2);
+    width: 100%;
+    background-color: #fff;
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* flex-wrap: wrap !important; */
   }
   header .navTop .logo img {
     height: 2.5rem;
@@ -172,7 +182,6 @@ a {
     background: -webkit-linear-gradient(90deg, hsla(201, 100%, 36%, 1) 0%, hsla(195, 80%, 51%, 1) 86%);
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0077B6", endColorstr="#1CB3E6", GradientType=1 );
-    /* background: linear-gradient(to right,#0a58ca,#2f7cec); */
     clip-path: polygon(100% 50%, 0 0, 0 100%);
     z-index: -1;
   }
@@ -253,14 +262,15 @@ a {
     border: none !important;
     border-radius: 0px !important;
   }
-  .dropdown-menu[data-bs-popper] {
+  /* .dropdown-menu[data-bs-popper] {
     top: calc(100% + .70rem);
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff !important;
     box-shadow: -1 0 5px rgba(66, 66, 66, .1);
     
-}
+} */
+
 .dropdown-item {
   display: block;
   width: 100%;
@@ -273,7 +283,7 @@ a {
   white-space: nowrap;
   background-color: transparent;
   border: 0px;
-  transition: .3s all;
+  transition: .1s all;
   position: relative;
 }
 .dropdown-item::before{
@@ -285,14 +295,14 @@ a {
   top: 50%;
   left: 7px;
   transform: translateY(-50%);
-  transition: .3s all;
+  transition: .2s all;
   color: #fff !important;
   z-index: -1;
 }
 .dropdown-item:hover::before , .dropdown-item:focus::before , .dropdown-item.active::before , .dropdown-item:active::before{
   content: "";
   width: 100%;
-  height: 90%;
+  height: 100%;
   background-color: var(--red-main);
   position: absolute;
   top: 50%;
@@ -302,8 +312,8 @@ a {
   color: #fff !important;
 }
 .dropdown-item:hover , .dropdown-item:focus , .dropdown-item.active ,.dropdown-item:active{
-  background-color: transparent !important;
-  color: #fff !important;
+  background-color: var(--red-main) !important;
+  color: rgb(255, 255, 255) !important;
 }
 /*  */
 .Facebook svg{
@@ -349,4 +359,20 @@ a {
   .linkFooter .linkMove:hover {
     color: var(--blue-main);
     left: 2.5rem;
+  }
+  @media(max-width:560px){
+    .mainHeading h1 {
+      font-size: 30px;
+    }
+    .mainHeading h1 span {
+      padding: 2px;
+    }
+    .mainHeading h1 .red{
+      padding: 2px;
+    }
+  }
+  @media(max-width:991px){
+    .welcomeMassage::before , .typier{
+      display: none;
+    }
   }

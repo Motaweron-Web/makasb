@@ -14,10 +14,11 @@ class AuthController extends Controller
     use PhotoTrait;
     public function register(){
         if (Auth::guard('user')->check()) {
-            return 'u r login';
+            return redirect('homepage');
         }
-        else
+        else{
             return view('site.Auth.register');
+        }
     }
 
     public function UserRegistration(request $request){
@@ -38,7 +39,7 @@ class AuthController extends Controller
         $user = User::create($data);
         if ($user){
             Auth::guard('user')->login($user);
-            return 'u r login';
+            return redirect('homepage');
         }
         else{
             toastError('هناك خطأ ما ...');
@@ -54,7 +55,7 @@ class AuthController extends Controller
 
     public function login(){
         if (Auth::guard('user')->check()) {
-            return 'u r login';
+            return redirect('homepage');
         }
         return redirect('/');
     }
@@ -69,8 +70,11 @@ class AuthController extends Controller
         ]);
         $status = ($request->has('rememberMe')) ? 'true' : 'false';
         if (Auth::guard('user')->attempt($request->only('email','password'),$status)){
-            return 'u r login';
+            toastSuccess('مرحبا بعودتك');
+            return redirect(route('homepage'));
         }
-        return $request;
+        toastError('بيانات دخول غير صحيحة');
+        return back();
     }
+
 }

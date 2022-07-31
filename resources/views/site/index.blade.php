@@ -2,8 +2,11 @@
 @section('page_name')
     مكاسـب | تسويق مجاني عبر وسائل التواصل الاجتماعي
 @endsection
+@section('site_css')
+    <link rel="stylesheet" href="{{asset('assets/site/css')}}/style.css" />
+@endsection
 @section('content')
-<header>
+    <header>
     <nav class="navbar navbar-expand-lg navbar-light navTop">
         <div class="container">
             <a class="navbar-brand logo" href="#"><img class="LogoBrand" src="{{asset('assets/site/img')}}/logo.png" alt="" /></a>
@@ -35,8 +38,13 @@
                             Select Language
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Arabic</a></li>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li>
+                                    <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['name'] }}
+                                    </a>
+                                </li>
+                        @endforeach
                         </ul>
                     </div>
                 </ul>
@@ -49,8 +57,8 @@
             <form action="{{route('postLogin')}}" method="post" class="Login">
                 @csrf
                 <div class="filedLogin">
-                    <input type="email" placeholder="Email" name="email" id="email" />
-                    <input type="password" name="password" placeholder="Password" />
+                    <input type="email" required placeholder="Email" name="email" id="email" />
+                    <input type="password" required name="password" placeholder="Password" />
                     <button type="submit" class="siadeButton"><a>Login </a></button>
                 </div>
                 <div class="remember d-flex justify-content-between">
@@ -452,5 +460,9 @@
         </div>
     </div>
 </section>
+
+@endsection
+@section('site_js')
+    <script src="{{asset('assets/site/JS')}}/main.js"></script>
 @endsection
 

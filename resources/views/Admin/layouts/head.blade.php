@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- FAVICON -->
-<link rel="shortcut icon" type="image/x-icon" href="{{($setting->logo) ?? asset('assets/site/media/favicon.png')}}" />
+<link rel="shortcut icon" type="image/x-icon" href="{{($setting->logo) ?? asset('assets/site/img')}}/logo.png"/>
 
 <!-- TITLE -->
 <title>@yield('title')</title>
