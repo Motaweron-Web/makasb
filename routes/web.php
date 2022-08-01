@@ -29,23 +29,39 @@ Route::group(
     Route::POST('UserRegistration', 'Site\AuthController@UserRegistration')->name('UserRegistration');
     Route::get('login', 'Site\AuthController@login')->name('login');
     Route::post('postLogin', 'Site\AuthController@postLogin')->name('postLogin');
-    Route::get('logout', 'Site\AuthController@logout')->name('logout');
 
     Route::group(['middleware' => 'auth:user', 'namespace' => 'Site'], function () {
+        Route::get('logout', 'AuthController@logout')->name('logout');
         Route::get('homepage', 'HomeController@homepage')->name('homepage');
         Route::get('MySites', 'HomeController@MySites')->name('MySites');
         Route::get('AddSite', 'HomeController@AddSite')->name('AddSite');
         Route::get('subscription', 'HomeController@subscription')->name('subscription');
         Route::get('buyPoints', 'HomeController@buyPoints')->name('buyPoints');
 
-
-        ##### Facebook ####
-        Route::get('facebookShare', 'FacebookController@facebookShare')->name('facebookShare');
-
         #### My Sites #####
         Route::post('publishMySite', 'HomeController@publishMySite')->name('publishMySite');
         Route::post('deleteMySite', 'HomeController@deleteMySite')->name('deleteMySite');
+
+        ##### Instagram ####
+        Route::group(['prefix' => 'instagram'], function () {
+            Route::get('followers', 'InstagramController@followers')->name('instagram.followers');
+            Route::get('likes', 'InstagramController@likes')->name('instagram.likes');
+        });
+
+
+
+        ##### Facebook ####
+        Route::get('facebookShare', 'FacebookController@facebookShare')->name('facebookShare');
+        Route::get('facebookFollowers', 'FacebookController@facebookFollowers')->name('facebookFollowers');
+        Route::get('facebookPostLike', 'FacebookController@facebookPostLike')->name('facebookPostLike');
+        Route::get('facebookPostShare', 'FacebookController@facebookPostShare')->name('facebookPostShare');
+
     });
+
 });
+
+
+##### No Need To Lang
+Route::post('checkUserView', 'Site\FacebookController@checkUserView')->name('checkUserView');
 
 

@@ -48,13 +48,13 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{route('facebookShare')}}">Facebook Share</a></li>
                             <li>
-                                <a class="dropdown-item" href="facbookFollower.html">Facebook Followers</a>
+                                <a class="dropdown-item" href="{{route('facebookFollowers')}}">Facebook Followers</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="FBpostLike.html">Facebook Post Like</a>
+                                <a class="dropdown-item" href="{{route('facebookPostLike')}}">Facebook Post Like</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="FBpostSahre.html">Facebook Post Share</a>
+                                <a class="dropdown-item" href="{{route('facebookPostShare')}}">Facebook Post Share</a>
                             </li>
                         </ul>
                     </li>
@@ -71,9 +71,9 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="instgramFollower.html">Instagram Followers</a>
+                                <a class="dropdown-item" href="{{route('instagram.followers')}}">Instagram Followers</a>
                             </li>
-                            <li><a class="dropdown-item" href="instgramLike.html">Instagram Like</a></li>
+                            <li><a class="dropdown-item" href="{{route('instagram.likes')}}">Instagram Like</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown ">

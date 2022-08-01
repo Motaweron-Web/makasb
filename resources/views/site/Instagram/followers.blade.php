@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | فيسـبوك
+    مكاسـب | انستجرام
 @endsection
 @section('site_css')
     {{--        <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -10,26 +10,25 @@
 @section('content')
     @include('site.layouts.social-navbar')
     <div class="MainPage d-flex">
-        @include('site.HomePage.sidebar')
-        <div class="Home Share">
-            <div class="container sectionHight">
+        @include('site.layouts.sidebar')
+        <div class="Home Followers">
+            <div class="container">
                 <div class="row  align-items-center">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div><img src="{{asset('assets/site/img')}}/Smiley face-amico.svg" alt=""></div>
+                        <div><img src="{{asset('assets/site')}}/img/Business merger-amico.svg" alt=""></div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
-                            <h3 class="fs-4 fw-bold TitlePage"> Facebook Share</h3>
-                            <h3 class="fs-5 fw-bold TitlePage2">get FREE points by liking, following and etc. other
-                                profiles/posts</h3>
+                            <h3 class="fs-4 fw-bold TitlePage"> Instagram Followers</h3>
+                            <h3 class="fs-5 fw-bold">get FREE points by liking, following and etc. other profiles - posts </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                To get free points by sharing other's WebSites click on the "Share" button, then the
-                                page will be opened with popUp and after sharing the website the popUp will be closed
-                                automatically.
+                                To get free points by following other's Instagram accounts click on the ''follow'' button, then the account will be opened with popUp and after follow CLOSE the popUp yourself. The users who don't close manually the popUp, will not receive points.
+
+                                If You see blank Instagram page with "Oops an error occurred" message, then just click here or visit instagram.com in new browser tab, and then continue to get FREE points.
                             </p>
                             <div>
-                                <button class="mainButton"><a href="{{route('publishMySite')}}">
-                                        Get Facebook Share
+                                    <button class="mainButton Instagrams"><a href="{{route('publishMySite')}}">
+                                        Get Instagram Followers
                                     </a></button>
                             </div>
                         </div>
@@ -37,9 +36,10 @@
 
                 </div>
             </div>
-            <div class="container sectionHight2">
+            <div class="container">
+                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
                 @if($data->count())
-                    <div class="table">
+                    <div class="table instagram">
                         <table class="table-bordered table">
                             <tr>
                                 <th>Points</th>
@@ -55,13 +55,13 @@
                                         <td>
                                             <div class="text-center">
                                                 <button data-site-id={{$row->id}} data-url="{{$row->url}}"
-                                                        class="Deletes customBtn myShareBtn">Share
+                                                        class="Deletes Instagrams customBtn myShareBtn">Share
                                                 </button>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="text-center">
-                                                <button class="Delete customBtn skipBtn"
+                                                <button class="Delete Instagrams customBtn skipBtn"
                                                         onclick="HideFrame($(this).attr(('data-id')),$(this).attr('data-url'))"
                                                         data-url="{{$row->url}}"
                                                         data-id="{{$row->id}}">skip
@@ -82,22 +82,23 @@
                 @else
                     @include('site.layouts.empty_data')
                 @endif
-            </div>
-            <style>
-                .customBtn {
-                    font-size: 18px;
-                    display: inline-block;
-                    padding: 10px 15px;
-                    color: #fff;
-                }
+                <style>
+                    .customBtn {
+                        font-size: 18px;
+                        display: inline-block;
+                        padding: 10px 15px;
+                        color: #fff;
+                    }
 
-                iframe {
-                    display: block; /* iframes are inline by default */
-                    border: none; /* Reset default border */
-                    height: 100vh; /* Viewport-relative units */
-                    width: 84vw;
-                }
-            </style>
+                    iframe {
+                        display: block; /* iframes are inline by default */
+                        border: none; /* Reset default border */
+                        height: 100vh; /* Viewport-relative units */
+                        width: 84vw;
+                    }
+                </style>
+
+            </div>
         </div>
     </div>
 

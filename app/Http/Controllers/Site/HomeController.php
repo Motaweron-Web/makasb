@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     public function index(){
-        if(Auth::check()){
+        if(!Auth::check()){
             $data['sliders']  = Slider::all();
             $data['services'] = Service::all();
             $data['about']    = AboutUs::first();

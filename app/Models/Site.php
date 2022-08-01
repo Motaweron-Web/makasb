@@ -27,12 +27,22 @@ class Site extends Model
     }
 
 
+    public function getPointsForClickAttribute()
+    {
+        return $this->attributes['points_for_click'];
+    }
+
     ### Scopes ###
+    public function scopePreventedRows($query)
+    {
+        return $query->where('status','0')
+            ->orWhere('needed_clicks', 0)
+            ->orWhere('user_id', Auth::id());
+    }
+
     public function scopeAvailableRows($query)
     {
-        return $query->where('user_id', '<>', Auth::id())
-            ->orWhere('needed_clicks', 0)
-            ->orWhere('status',0);
+        return $query->where('needed_clicks' ,'>', 0)->where('status','1')->where('user_id','<>', Auth::guard('user')->id());
     }
 
 }
