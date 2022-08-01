@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2022 at 10:22 AM
+-- Generation Time: Aug 01, 2022 at 01:47 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -513,10 +513,11 @@ CREATE TABLE `sites` (
 --
 
 INSERT INTO `sites` (`id`, `user_id`, `site_type`, `title`, `url`, `daily_clicks_limit`, `total_clicks_limit`, `needed_clicks`, `points_for_click`, `status`, `created_at`, `updated_at`) VALUES
-(36, 10, 25, 'اريد اعجابات فيسبوك', 'https://www.youtube.com/embed/EZTLNKYf_d4', 10, 40, 40, 25, '1', '2022-07-28 11:15:53', '2022-07-28 11:19:54'),
-(38, 9, 25, 'اريد اعجابات فيسبوك', 'https://www.youtube.com/embed/EZTLNKYf_d4', 5, 80, 80, 25, '0', '2022-07-28 11:15:58', '2022-07-28 11:22:22'),
-(39, 8, 25, 'عنوان', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fanssahmedhamza%2Fposts%2Fpfbid0fj17peCqdWUoK5xWPCtszVjuXF5QHQwiTZVSPQnHsC5QDkXgpGJY7qdzBUEWrkaLl&show_text=true&width=500', 2, 50, 49, 25, '1', '2022-07-28 11:35:29', '2022-07-28 11:35:52'),
-(40, 6, 25, 'فيران توريس', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbarca.news.arab%2Fposts%2Fpfbid02XVKMQBjZM8LL6mdPu5XzeNvbLit67aQaPssYi8JKGzbwxKcKkLDLndJK6N1v2fL5l', 2, 50, 48, 25, '1', '2022-07-28 11:35:29', '2022-07-28 11:35:52');
+(36, 10, 31, 'اريد اعجابات فيسبوك', 'https://www.youtube.com/embed/EZTLNKYf_d4', 2, 40, 40, 25, '1', '2022-07-28 11:15:53', '2022-07-28 11:19:54'),
+(38, 9, 31, 'تفاعلات', 'https://www.youtube.com/embed/EZTLNKYf_d4', 5, 80, 80, 25, '0', '2022-07-28 11:15:58', '2022-07-28 11:22:22'),
+(39, 8, 31, 'عنوان', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fanssahmedhamza%2Fposts%2Fpfbid0fj17peCqdWUoK5xWPCtszVjuXF5QHQwiTZVSPQnHsC5QDkXgpGJY7qdzBUEWrkaLl&show_text=true&width=500', 2, 50, 43, 25, '1', '2022-07-28 11:35:29', '2022-08-01 11:19:23'),
+(40, 6, 31, 'فيران توريس', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbarca.news.arab%2Fposts%2Fpfbid02XVKMQBjZM8LL6mdPu5XzeNvbLit67aQaPssYi8JKGzbwxKcKkLDLndJK6N1v2fL5l', 2, 50, 20, 25, '1', '2022-07-28 11:35:29', '2022-08-01 09:48:39'),
+(41, 10, 31, 'عنوان', 'https://www.facebook.com/photo/?fbid=1071610280457188&set=a.101744710777088', NULL, NULL, NULL, 25, '0', '2022-07-31 12:31:48', '2022-07-31 12:31:48');
 
 -- --------------------------------------------------------
 
@@ -539,7 +540,8 @@ CREATE TABLE `site_countries` (
 INSERT INTO `site_countries` (`id`, `site_id`, `country_id`, `created_at`, `updated_at`) VALUES
 (15, 36, 3, '2022-07-28 11:15:53', '2022-07-28 11:15:53'),
 (17, 38, 3, '2022-07-28 11:15:58', '2022-07-28 11:15:58'),
-(18, 39, 3, '2022-07-28 11:35:29', '2022-07-28 11:35:29');
+(18, 39, 3, '2022-07-28 11:35:29', '2022-07-28 11:35:29'),
+(19, 41, 2, '2022-07-31 12:31:48', '2022-07-31 12:31:48');
 
 -- --------------------------------------------------------
 
@@ -560,9 +562,7 @@ CREATE TABLE `site_infos` (
 --
 
 INSERT INTO `site_infos` (`id`, `site_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 40, 10, '2022-07-28 14:18:14', '2022-07-28 14:18:14'),
-(2, 36, 10, '2022-07-28 14:18:14', '2022-07-28 14:18:14'),
-(3, 40, 6, '2022-07-28 14:18:14', '2022-07-28 14:18:14');
+(30, 39, 10, '2022-08-01 11:19:23', '2022-08-01 11:19:23');
 
 -- --------------------------------------------------------
 
@@ -611,7 +611,8 @@ INSERT INTO `site_types` (`id`, `title_ar`, `title_en`, `created_at`, `updated_a
 (27, 'اعجاب بوست فيسـبوك', 'Facebook Post Like', '2022-07-27 13:22:26', '2022-07-27 13:22:26'),
 (28, 'قنوات تليجرام', 'Telegram Channels', '2022-07-27 13:23:19', '2022-07-27 13:23:19'),
 (29, 'تحديثات رديت', 'Reddit Updates', '2022-07-27 13:23:50', '2022-07-27 13:23:50'),
-(30, 'اعضاء رديت', 'Reddit Members', '2022-07-27 13:25:06', '2022-07-27 13:25:06');
+(30, 'اعضاء رديت', 'Reddit Members', '2022-07-27 13:25:06', '2022-07-27 13:25:06'),
+(31, 'متابعات انستجرام', 'Instagram Followers', '2022-07-27 10:38:29', '2022-07-27 10:38:29');
 
 -- --------------------------------------------------------
 
@@ -648,11 +649,11 @@ INSERT INTO `sliders` (`id`, `desc_ar`, `desc_en`, `btn_title_ar`, `btn_title_en
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `balance` double DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `points` double NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -661,13 +662,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `email`, `password`, `image`, `remember_token`, `points`, `created_at`, `updated_at`) VALUES
-(5, 'monuqo', 'gagyfyp@mailinator.com', '$2y$10$5mZDeX2EhfJ/BgNwq85lXexwESzjZYpPK5y24hCONk0b3y/Fp1Um.', NULL, NULL, 200, '2022-07-21 13:43:39', '2022-07-21 13:43:39'),
-(6, 'qehocytic', 'tevakuqo@mailinator.com', '$2y$10$C1PLPyJeIY5w9Y26lDeSX.XKPkbyFoEPzWh4OCP43ozYYepuPiy/.', NULL, NULL, 200, '2022-07-21 13:44:55', '2022-07-21 13:44:55'),
-(7, 'nolatagir', 'notyfeqy@mailinator.com', '$2y$10$WA0A39GCxMsvm/tOWpIAxeEdyubpQUA5QjwIBdujAzzoE7Avgy7NS', NULL, NULL, 200, '2022-07-21 13:52:35', '2022-07-21 13:52:35'),
-(8, 'quwob', 'kiwiz@mailinator.com', '$2y$10$bGNr0xvkWWTIJit21T8n6O1JSOkdTS3L3UWI49Dvc3mIo9IoYKQdy', NULL, NULL, 50, '2022-07-21 13:55:36', '2022-07-21 13:55:36'),
-(9, 'laqegereza', 'lezar@mailinator.com', '$2y$10$rR7TUVhxfbWOanU0h9G9puLKGKCUXJ2VsmnFCHnkJtIiSGsm9z336', NULL, NULL, 120, '2022-07-21 13:56:00', '2022-07-21 13:56:00'),
-(10, 'Ahmed Yahya', 'ahmedtarekya100@gmail.com', '$2y$10$jlNtPx1Fbn74VS0YHP65iOQ/MFdBiv.hjUyKhVtBUFHFB4MQ1FR8G', NULL, 'F0Mk2URnKH0s95isOkkWdWAXUwYre3qRLqNEtBGI07bo0bnuAQfCvcIFzYcA', 200, '2022-07-21 14:15:39', '2022-07-21 14:15:39');
+INSERT INTO `users` (`id`, `user_name`, `balance`, `email`, `password`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
+(5, 'monuqo', 500, 'gagyfyp@mailinator.com', '$2y$10$5mZDeX2EhfJ/BgNwq85lXexwESzjZYpPK5y24hCONk0b3y/Fp1Um.', NULL, NULL, '2022-07-21 13:43:39', '2022-07-21 13:43:39'),
+(6, 'qehocytic', 450, 'tevakuqo@mailinator.com', '$2y$10$C1PLPyJeIY5w9Y26lDeSX.XKPkbyFoEPzWh4OCP43ozYYepuPiy/.', NULL, NULL, '2022-07-21 13:44:55', '2022-08-01 09:48:39'),
+(7, 'nolatagir', 150, 'notyfeqy@mailinator.com', '$2y$10$WA0A39GCxMsvm/tOWpIAxeEdyubpQUA5QjwIBdujAzzoE7Avgy7NS', NULL, NULL, '2022-07-21 13:52:35', '2022-07-21 13:52:35'),
+(8, 'quwob', 275, 'kiwiz@mailinator.com', '$2y$10$bGNr0xvkWWTIJit21T8n6O1JSOkdTS3L3UWI49Dvc3mIo9IoYKQdy', NULL, NULL, '2022-07-21 13:55:36', '2022-08-01 11:19:23'),
+(9, 'laqegereza', 270, 'lezar@mailinator.com', '$2y$10$rR7TUVhxfbWOanU0h9G9puLKGKCUXJ2VsmnFCHnkJtIiSGsm9z336', NULL, NULL, '2022-07-21 13:56:00', '2022-07-31 13:44:07'),
+(10, 'Ahmed Yahya', 1100, 'ahmedtarekya100@gmail.com', '$2y$10$jlNtPx1Fbn74VS0YHP65iOQ/MFdBiv.hjUyKhVtBUFHFB4MQ1FR8G', NULL, 'h4tHv0IZX3e9yFaur46y3hf8ASWJ7uOxYEKn7GK6PQw0mKAeBVIgQaWZkuac', '2022-07-21 14:15:39', '2022-08-01 11:19:23');
 
 --
 -- Indexes for dumped tables
@@ -845,25 +846,25 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `sites`
 --
 ALTER TABLE `sites`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `site_countries`
 --
 ALTER TABLE `site_countries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `site_infos`
 --
 ALTER TABLE `site_infos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `site_types`
 --
 ALTER TABLE `site_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `sliders`
