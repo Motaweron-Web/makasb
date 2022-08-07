@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2022 at 09:26 AM
+-- Generation Time: Aug 07, 2022 at 05:05 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -414,7 +414,42 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2022_07_28_101427_create_site_countries_table', 4),
 (14, '2022_09_27_152917_create_countries_table', 4),
 (15, '2022_07_28_161137_create_site_infos_table', 5),
-(16, '2022_08_04_131011_create_points_table', 6);
+(16, '2022_08_04_131011_create_points_table', 6),
+(17, '2022_08_07_141456_create_payments_table', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payments`
+--
+
+CREATE TABLE `payments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `product_id` bigint(20) DEFAULT NULL,
+  `payment_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `paymentBrand` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `status` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`id`, `user_id`, `product_id`, `payment_id`, `paymentBrand`, `amount`, `status`, `created_at`, `updated_at`) VALUES
+(25, 10, 4, '44C3A120D556071A8BC1A10139AAB8AC.uat01-vm-tx04', NULL, 25, '0', '2022-08-07 14:49:08', '2022-08-07 14:49:08'),
+(27, 10, 4, '3E536D56861668207C0F5C6768808AE1.uat01-vm-tx03', NULL, 25, '0', '2022-08-07 14:49:23', '2022-08-07 14:49:23'),
+(28, 10, 2, '2FC1563AC391219FF6CDA3B4C790DB78.uat01-vm-tx04', NULL, 5, '0', '2022-08-07 14:54:20', '2022-08-07 14:54:20'),
+(29, 10, 2, 'F5437B33F1EEAD9E2DDD45535CBD7AF1.uat01-vm-tx01', NULL, 5, '0', '2022-08-07 14:55:35', '2022-08-07 14:55:35'),
+(30, 10, 2, 'C42F9A6533C98281946B1F09315C75F0.uat01-vm-tx03', NULL, 5, '0', '2022-08-07 14:56:45', '2022-08-07 14:56:58'),
+(31, 10, 2, '071982359E5E5D47690A883A82945185.uat01-vm-tx03', NULL, 5, '0', '2022-08-07 14:58:24', '2022-08-07 14:58:24'),
+(32, 10, 2, 'BCA539052247A26C489D3DEE5857B1AD.uat01-vm-tx03', NULL, 5, '0', '2022-08-07 14:59:06', '2022-08-07 14:59:06'),
+(33, 10, 2, 'A25479A963F157A7EA746E66487E48B8.uat01-vm-tx01', NULL, 5, '0', '2022-08-07 15:00:04', '2022-08-07 15:00:24'),
+(34, 10, 2, '702089CC82271600E3CA157F96B2B37C.uat01-vm-tx02', NULL, 5, '0', '2022-08-07 15:00:43', '2022-08-07 15:01:02'),
+(35, 10, 2, '0D0138E22836954DCBE0C26626D46011.uat01-vm-tx02', NULL, 5, '0', '2022-08-07 15:02:42', '2022-08-07 15:02:58');
 
 -- --------------------------------------------------------
 
@@ -695,7 +730,7 @@ INSERT INTO `users` (`id`, `user_name`, `balance`, `email`, `password`, `image`,
 (5, 'monuqo', 500, 'gagyfyp@mailinator.com', '$2y$10$5mZDeX2EhfJ/BgNwq85lXexwESzjZYpPK5y24hCONk0b3y/Fp1Um.', 'assets/uploads/admins/66161658316929.webp', NULL, '2022-07-21 13:43:39', '2022-07-21 13:43:39'),
 (6, 'qehocytic', 405, 'tevakuqo@mailinator.com', '$2y$10$C1PLPyJeIY5w9Y26lDeSX.XKPkbyFoEPzWh4OCP43ozYYepuPiy/.', NULL, NULL, '2022-07-21 13:44:55', '2022-08-04 15:01:18'),
 (7, 'nolatagir', 150, 'notyfeqy@mailinator.com', '$2y$10$WA0A39GCxMsvm/tOWpIAxeEdyubpQUA5QjwIBdujAzzoE7Avgy7NS', NULL, NULL, '2022-07-21 13:52:35', '2022-07-21 13:52:35'),
-(10, 'Ahmed Tarek YA', 1145, 'ahmedtarekya100@gmail.com', '$2y$10$ZG1/Ijqxh7VIQ.oM.oGhYOedkgYH0FcayqT/ml0vI0/WszwDAav9e', 'assets/uploads/users/69051659613426.webp', 'ZmYE2qAn92vFH13tyMI9xYTt54G3TjxI1FSOtZ7mNJc9ujGWeseHjoNtz64e', '2022-07-21 14:15:39', '2022-08-04 15:01:18'),
+(10, 'Ahmed Tarek YA', 2445, 'ahmedtarekya100@gmail.com', '$2y$10$ZG1/Ijqxh7VIQ.oM.oGhYOedkgYH0FcayqT/ml0vI0/WszwDAav9e', 'assets/uploads/users/69051659613426.webp', 'mNcdbfxlQBlcYID3VUD4YHZWGUrwfOyGLnx3HXPDR4aY3fgPM8GoYaDLFzCh', '2022-07-21 14:15:39', '2022-08-07 15:02:58'),
 (19, 'mojha', 25, 'ahmedtarekya@gmail.com', '$2y$10$jlNtPx1Fbn74VS0YHP65iOQ/MFdBiv.hjUyKhVtBUFHFB4MQ1FR8G', 'assets/uploads/users/51831659365954.webp', NULL, '2022-08-01 14:40:12', '2022-08-01 14:59:15'),
 (22, 'test api', 0, 'test@test.com', '$2y$10$PyKfzxfD2lDX8S/rov7I3e3uH3zk/73qqAWzMa7bi4c7IpIs0FUKu', NULL, NULL, '2022-08-04 09:08:54', '2022-08-04 09:08:54'),
 (23, 'test api', 0, 'test2@test.com', '$2y$10$rs52y4lCgmAOMt2oxtoFSuUMqQT9cGWyW5gfeA0xjV4Qx6kZb4zUC', 'assets/uploads/users/14641659604166.webp', NULL, '2022-08-04 09:09:26', '2022-08-04 09:09:26'),
@@ -748,6 +783,13 @@ ALTER TABLE `feature_lists`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `payments_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `personal_access_tokens`
@@ -859,7 +901,13 @@ ALTER TABLE `feature_lists`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `payments`
+--
+ALTER TABLE `payments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -924,6 +972,12 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `payments`
+--
+ALTER TABLE `payments`
+  ADD CONSTRAINT `payments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `sites`

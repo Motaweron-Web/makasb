@@ -77,6 +77,11 @@ Route::group(
         Route::get('facebookPostLike', 'FacebookController@facebookPostLike')->name('facebookPostLike');
         Route::get('facebookPostShare', 'FacebookController@facebookPostShare')->name('facebookPostShare');
 
+
+        ##### Payment ####
+        Route::get('checkPay', 'HomeController@checkPay')->name('checkPay');
+        Route::get('pointsPrices/{id}', 'HomeController@pointsPrices')->name('pointsPrices');
+
     });
 
 });
