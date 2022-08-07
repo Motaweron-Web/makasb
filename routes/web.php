@@ -33,6 +33,10 @@ Route::group(
     Route::group(['middleware' => 'auth:user', 'namespace' => 'Site'], function () {
         Route::get('logout', 'AuthController@logout')->name('logout');
         Route::get('profile', 'AuthController@profile')->name('profile');
+        Route::post('edit/myProfile','AuthController@editProfile')->name('admin.edit.myProfile');
+        Route::post('edit/myPassword','AuthController@editPassword')->name('admin.edit.myPassword');
+        Route::get('delete/myProfile','AuthController@deleteMyProfile')->name('admin.deleteMyProfile');
+
         Route::get('homepage', 'HomeController@homepage')->name('homepage');
         Route::get('MySites', 'HomeController@MySites')->name('MySites');
         Route::get('AddSite', 'HomeController@AddSite')->name('AddSite');

@@ -70,8 +70,7 @@ $(document).ready(function () {
         $(this).addClass("active").siblings().removeClass("active")
         $("#" + $(this).data("show")).show().siblings().hide()
       })
-      $("#Username").attr("value" , "ahmedEltatawy")
-      $("#Email").attr("value" , "ahmedEltatawy@gmail.com")
+
       $(".country").select2({
         placeholder: "Select a country",
         allowClear: true
@@ -79,5 +78,5 @@ $(document).ready(function () {
     $("#navbar-toggler").on("click" , function () {
       $(".navTop").toggleClass("active")
     })
-    
+
 })

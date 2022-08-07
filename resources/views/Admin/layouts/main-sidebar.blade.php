@@ -35,6 +35,15 @@
             </a>
         </li>
 
+
+
+
+        <li class="slide">
+            <a class="side-menu__item" href="{{route('points.index')}}">
+                <i class="fe fe-dollar-sign" aria-hidden="true"></i>
+                <span class="side-menu__label">النقاط</span>
+            </a>
+        </li>
 {{--        <li class="slide">--}}
 {{--            <a class="side-menu__item" href="{{route('users.index')}}">--}}
 {{--                <i class="fe fe-user-minus side-menu__icon"></i>--}}

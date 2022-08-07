@@ -51,4 +51,28 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
 
     #### Auth ####
     Route::get('logout', 'AuthController@logout')->name('admin.logout');
+
+
+
+   ### Points #######
+
+
+   Route::resource('points','PointController');
+    Route::POST('delete_point','PointController@delete')->name('delete_point');
+
+
+
+
+
+
 });
+
+
+
+
+
+
+
+
+
+

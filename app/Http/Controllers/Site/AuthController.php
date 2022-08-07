@@ -82,4 +82,70 @@ class AuthController extends Controller
         return view('site.profile');
     }
 
+    public function editProfile(Request $request){
+        $user=auth()->user();
+        $validator=\Validator::make($request->all(),
+            [
+                'email'=>'required|unique:users,email,'.$user->id,
+                'user_name'=>'required|string|min:3|max:100',
+                'image'         => 'nullable|mimes:jpeg,jpg,png,gif',
+
+            ]);
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $inputs=[];
+        $inputs['email']=$request->email;
+        $inputs['user_name']=$request->user_name;
+
+        if($request->has('image')){
+            if (file_exists($user->image)) {
+                unlink($user->image);
+            }
+            $inputs['image'] = $this->saveImage($request->image,'assets/uploads/users');
+        }
+
+       $user->update($inputs);
+        toastSuccess('تم تعديل حسابك بنجاح');
+        return  redirect()->route('profile');
+
+    }
+
+    public function editPassword(Request $request){
+        $data = $request->validate([
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required|min:6'
+
+        ],[
+            'password.required'  => 'يرجي ادخال كلمة المرور' ,
+            'password_confirmation.required'  => 'يرجي تاكيد كلمة المرور' ,
+            'password.confirmed'  => 'يرجي ادخال كلمة المرور' ,
+            'password.min'  => 'الحد الادني لكلمة الحروف ستة احرف' ,
+            'password_confirmation.min'  => 'الحد الادني لكلمة الحروف ستة احرف' ,
+
+
+        ]);
+
+
+        $user=auth()->user();
+        $user->password= Hash::make($request->password);
+        $user->save();
+        return response()->json(['status'=>true]);
+
+    }
+
+
+
+    public function deleteMyProfile(){
+        $user=auth()->user();
+        $user->delete();
+        return redirect()->route('/');
+    }
+
+
+
+
 }

@@ -109,12 +109,7 @@ class SliderController extends Controller
             return response()->json(['status' => 405]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         //
