@@ -62,7 +62,7 @@
 
                             @foreach($points as $point)
                             <div class="swiper-slide">
-                                <a href="#">
+                                <a href="{{route('pointsPrices',encrypt($point->id))}}">
                                     <div class="buyPointsPackags">
                                         <div class="ObigetTitle ">
                                             <h2 class="Title">{{$point->price}}$</h2>
@@ -82,12 +82,10 @@
                 </div>
             </div>
         </div>
-
     </div>
     <br>
     <br>
     <br>
-
 @endsection
 @section('site_js')
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

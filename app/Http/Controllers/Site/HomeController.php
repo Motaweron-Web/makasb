@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSite;
 use App\Models\AboutUs;
 use App\Models\Country;
+use App\Models\Payment;
 use App\Models\Point;
 use App\Models\Service;
 use App\Models\Site;
 use App\Models\SiteCountry;
 use App\Models\SiteType;
 use App\Models\Slider;
+use App\Models\User;
 use Facebook\Facebook;
 use FacebookAds\Object\AdAccount;
 use FacebookAds\Object\Campaign;
@@ -93,5 +95,77 @@ class HomeController extends Controller
         $points = Point::all();
         return view('site.buy_points',compact('points'));
     }
+
+
+    public function pointsPrices($product_id) {
+        $product = Point::findOrFail(decrypt($product_id));
+        $url = "https://eu-test.oppwa.com/v1/checkouts";
+        $data =
+            "entityId=8a8294174b7ecb28014b9699220015ca" .
+            "&amount=".$product->price .
+            "&currency=USD" .
+            "&paymentType=DB";
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Authorization:Bearer OGE4Mjk0MTc0YjdlY2IyODAxNGI5Njk5MjIwMDE1Y2N8c3k2S0pzVDg='));
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);// this should be set to true in production
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        Payment::create([
+            'user_id'      => Auth::user()->id,
+            'amount'       => $product->price,
+            'product_id'   => $product->id,
+            'payment_id'   => $responseData->id,
+        ]);
+        return view('site.paymentForm',compact('responseData','product'));
+    }
+
+    public function checkPay(request $request){
+        try{
+            $url = "https://eu-test.oppwa.com".$request->resourcePath;
+            $url .= "?entityId=8a8294174b7ecb28014b9699220015ca";
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Authorization:Bearer OGE4Mjk0MTc0YjdlY2IyODAxNGI5Njk5MjIwMDE1Y2N8c3k2S0pzVDg='));
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);// this should be set to true in production
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $responseData = curl_exec($ch);
+            if(curl_errno($ch)) {
+                return curl_error($ch);
+            }
+            curl_close($ch);
+            $response = json_decode($responseData);
+            if($response->result->code == '000.100.110'){
+                $pay = Payment::where('payment_id',$response->ndc)->first();
+                if($pay){
+                    $pay->update(['status' => 1]);
+                    User::find(Auth::guard('user')->id())->increment('balance', Point::find($pay->product_id)->number_of_points);
+                    toastSuccess('تم شراء النقاط بنجاح');
+                    return redirect(route('profile'));
+                }
+            }
+            else{
+                toastError('عذرا حدث خطأ اثناء الدفع...');
+                return back();
+            }
+        }
+        catch (\Exception $e){
+            toastError('عذرا حدث خطأ اثناء الدفع...');
+            return redirect(route('buyPoints'));
+        }
+
+    }
+
 
 }
