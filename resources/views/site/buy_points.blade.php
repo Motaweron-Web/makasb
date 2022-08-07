@@ -3,9 +3,13 @@
     مكاسـب | النقاط
 @endsection
 @section('site_css')
-{{--        <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
+    {{--        <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/conis_ar.css"/>
+    @endif
 @endsection
 @section('content')
     @include('site.layouts.social-navbar')
@@ -28,8 +32,10 @@
                                 </h3>
                                 <p class="fs-6 mt-lg-3  mb-5 lh-base">
                                     You can choose one of the available payment methods and buy points for Social Media.
-                                    For every bundle purchased from Payrexx, Trust Payments and PaymentWall, you will receive <span class="number">30%</span> More Points.
-                                    Your bought (+Bonus) points will be added to your account automatically after purchase done.
+                                    For every bundle purchased from Payrexx, Trust Payments and PaymentWall, you will
+                                    receive <span class="number">30%</span> More Points.
+                                    Your bought (+Bonus) points will be added to your account automatically after
+                                    purchase done.
                                     You will receive confirmation email immediately after we will credit your account.
                                 </p>
                             </div>
@@ -41,174 +47,34 @@
                             <span class="red">U</span>
                             <span class="red">Y</span>
                             <span class="space"></span>
-                            <span >P</span>
-                            <span >O</span>
-                            <span >I</span>
-                            <span >N</span>
-                            <span >T</span>
-                            <span >S</span>
+                            <span>P</span>
+                            <span>O</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>T</span>
+                            <span>S</span>
                         </h1>
                     </div>
                 </div>
                 <div class="buyPointsPackage">
                     <div class="container  mySwiper">
                         <div class="swiper-wrapper">
-                            <div class= "swiper-slide">
+
+                            @foreach($points as $point)
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="buyPointsPackags">
                                         <div class="ObigetTitle ">
-                                            <h2 class="Title">1$</h2>
+                                            <h2 class="Title">{{$point->price}}$</h2>
                                         </div>
                                         <div class="Prise PriseHover">
-                                            <span class="prise">200</span>
+                                            <span class="prise">{{$point->number_of_points}}</span>
                                             <span class="Week">Points</span>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">5$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">1300</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">10$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">2000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">25$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">5000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">50$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">9000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">75$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">14000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">100$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">19000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">200$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">38000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">400$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">75000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">700$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">132000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">1000$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">189000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class=" swiper-slide">
-                                <a href="#">
-                                    <div class="buyPointsPackags">
-                                        <div class="ObigetTitle">
-                                            <h2 class="Title">2000$</h2>
-                                        </div>
-                                        <div class="Prise PriseHover">
-                                            <span class="prise">377000</span>
-                                            <span class="Week">Points</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                            @endforeach
 
                         </div>
 
@@ -218,6 +84,9 @@
         </div>
 
     </div>
+    <br>
+    <br>
+    <br>
 
 @endsection
 @section('site_js')

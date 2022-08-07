@@ -2,10 +2,14 @@
 @section('page_name')
     مكاسـب | تسجيل جديد
 @endsection
-@section('content')
-@section('body_style')
-    style="overflow: hidden;"
+@section('site_css')
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/style.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/style_ar.css"/>
+    @endif
 @endsection
+@section('content')
 @if(count($errors) > 0 )
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <ul class="p-0 m-0" style="list-style: none;">
@@ -15,6 +19,11 @@
         </ul>
     </div>
 @endif
+<style>
+    body{
+        overflow-y: hidden;
+    }
+</style>
     <section class="LoginPage">
         <div class="container">
             <div class="row  justify-content-between align-items-center">
@@ -54,7 +63,7 @@
                                 </style>
                                 <button type="submit" class="mainButton2"><a>Sign
                                         UP</a></button>
-                                <p class="outer-link">Already have an account? <a class="loginIn2" href="index.html">
+                                <p class="outer-link">Already have an account? <a class="loginIn2" href="{{route('/')}}">
                                         Login Now</a>
                                 </p>
                             </div>

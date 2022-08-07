@@ -14,7 +14,7 @@ class InstagramController extends Controller
 
 
     public function likes(){
-        $data = (new \App\Http\Helper\GlobalSelection)->availableRows(31);
-        return view('site.facebook.facebookShare', compact('data'));
+        $data = (new \App\Http\Helper\GlobalSelection)->availableRows(1);
+        return view('site.Instagram.likes', compact('data'));
     }
 }

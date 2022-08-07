@@ -4,7 +4,11 @@
 @endsection
 @section('site_css')
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/conis_ar.css"/>
+    @endif
 @endsection
 @section('content')
     @include('site.layouts.social-navbar')
@@ -93,6 +97,9 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
     <style>
         .submitBtn{
             font-size: 18px;

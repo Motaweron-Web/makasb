@@ -14,7 +14,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
         return view('Admin/index');
     })->name('adminHome');
 
-
     #### Admins ####
     Route::resource('admins','AdminController');
     Route::POST('delete_admin','AdminController@delete')->name('delete_admin');
@@ -24,6 +23,13 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Services ####
     Route::resource('services','ServiceController');
     Route::post('services.delete','ServiceController@delete')->name('services.delete');
+
+
+
+    #### User ####
+    Route::resource('users','UserController');
+    Route::post('usersDelete','UserController@delete')->name('usersDelete');
+
 
 
     #### Sliders ####

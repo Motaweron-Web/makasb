@@ -4,8 +4,16 @@
 @endsection
 @section('site_css')
     <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.css"/>
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/homePage.css"/>
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/homePage.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/homepage_ar.css"/>
+    @endif
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/conis_ar.css"/>
+    @endif
 @endsection
 @section('content')
     @include('site.layouts.social-navbar')

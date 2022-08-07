@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSite;
 use App\Models\AboutUs;
 use App\Models\Country;
+use App\Models\Point;
 use App\Models\Service;
 use App\Models\Site;
 use App\Models\SiteCountry;
@@ -89,7 +90,8 @@ class HomeController extends Controller
     }
 
     public function buyPoints(){
-        return view('site.buy_points');
+        $points = Point::all();
+        return view('site.buy_points',compact('points'));
     }
 
 }

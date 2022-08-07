@@ -22,11 +22,16 @@ class AllPostsController extends Controller
                     ->editColumn('user_id', function ($sites) {
                         return ($sites->user->user_name) ?? '---';
                     })
-                    ->editColumn('site_type', function ($sites) {
-                        return ($sites->type->title_ar) ?? '---';
+                    ->editColumn('title', function ($sites) {
+                        return "<a target='blank' href=".$sites->url.">".$sites->title."</a>";
                     })
                     ->editColumn('site_type', function ($sites) {
                         return ($sites->type->title_ar) ?? '---';
+                    })
+                    ->editColumn('total_clicks_limit', function ($user) {
+                        $total    = $user->total_clicks_limit;
+                        $reminder = $user->needed_clicks;
+                        return 'مطلوب '.$total.' المتبقي '.$reminder;
                     })
                     ->editColumn('status', function ($products) {
                         if($products->status == 0)

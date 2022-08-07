@@ -209,7 +209,7 @@ header .navTop .navTopLink .nav-item .nav-link:hover {
 }
 .MobileNav {
   display: none;
-
+  
 }
 .LoginRight {
   position: fixed;
@@ -517,7 +517,7 @@ footer {
   transform: translateX(-50%);
   background-color: #fff !important;
   box-shadow: -1 0 5px rgba(66, 66, 66, .1);
-
+  
 } */
 
 .dropdown-item {
@@ -616,7 +616,7 @@ color: rgb(255, 255, 255) !important;
     bottom: 120px;
     left: 67%;
   }
-
+  
 }
 @media (max-width:1299px){
   .imgsLogin .LoginPageLogo{
@@ -624,7 +624,7 @@ color: rgb(255, 255, 255) !important;
     bottom: 130px;
     left: 68%;
   }
-
+  
 }
 @media (max-width:1199px){
   .imgsLogin .LoginPageLogo{
@@ -632,7 +632,7 @@ color: rgb(255, 255, 255) !important;
     bottom: 160px;
     left: 67%;
   }
-
+  
 }
 @media (max-width:1091px){
   .imgsLogin .LoginPageLogo{
@@ -640,5 +640,5 @@ color: rgb(255, 255, 255) !important;
     bottom: 160px;
     left: 68%;
   }
-
+  
 }

@@ -9,7 +9,7 @@ trait GeneralTrait
         return app()->getLocale();
     }
 
-    public function returnError($code,$msg,$status = 400)
+    public function returnError($msg,$status = 400)
     {
         return response()->json([
             'data' => null,
@@ -28,20 +28,20 @@ trait GeneralTrait
         ];
     }
 
-    public function returnData($key, $value, $msg = "")
+    public function returnData($key, $value, $msg = "",$code=200)
     {
         return response()->json([
             $key => $value,
             'msg' => $msg,
-            'status' => 200,
+            'status' => $code,
         ],200);
     }
 
 
 
-    public function returnValidationError($code = "E001", $validator)
+    public function returnValidationError($code = "E001", $validator,$status=200)
     {
-        return $this->returnError($code, $validator->errors()->first());
+        return $this->returnError($code, $validator->errors()->first(),$status);
     }
 
 
@@ -225,6 +225,5 @@ trait GeneralTrait
         else
             return "";
     }
-
 
 }

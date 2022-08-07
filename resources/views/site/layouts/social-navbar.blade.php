@@ -88,14 +88,14 @@
                             <i class="fa-brands fa-twitter me-1"></i>Twitter
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="TwitterTweets.html">Twitter Tweets</a></li>
+                            <li><a class="dropdown-item" href="{{route('twitter.tweets')}}">Twitter Tweets</a></li>
                             <li>
-                                <a class="dropdown-item" href="TwitterFollowers.html">Twitter Followers</a>
+                                <a class="dropdown-item" href="{{route('twitter.followers')}}">Twitter Followers</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="TwitterRetweet.html">Twitter Retweets</a>
+                                <a class="dropdown-item" href="{{route('twitter.retweets')}}">Twitter Retweets</a>
                             </li>
-                            <li><a class="dropdown-item" href="TwitterLikes.html">Twitter Likes</a></li>
+                            <li><a class="dropdown-item" href="{{route('twitter.likes')}}">Twitter Likes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown ">
@@ -111,10 +111,10 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="YoutubeSubscribe.html">YouTube Subscribe</a>
+                                <a class="dropdown-item" href="{{route('youtube.index','subscribe')}}">YouTube Subscribe</a>
                             </li>
-                            <li><a class="dropdown-item" href="YoutubeLikes.html">YouTube Likes</a></li>
-                            <li><a class="dropdown-item" href="YoutubeViews.html">YouTube Views</a></li>
+                            <li><a class="dropdown-item" href="{{route('youtube.index','likes')}}">YouTube Likes</a></li>
+                            <li><a class="dropdown-item" href="{{route('youtube.index','views')}}">YouTube Views</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown ">
@@ -130,10 +130,10 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="tiktokFollowers.html">TikTok Followers</a>
+                                <a class="dropdown-item" href="{{route('tiktok.index','followers')}}">TikTok Followers</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="tiktokVideoLike.htm">TikTok Video Likes</a>
+                                <a class="dropdown-item" href="{{route('tiktok.index','likes')}}">TikTok Video Likes</a>
                             </li>
                         </ul>
                     </li>
@@ -150,13 +150,13 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="soundCouldLikes.html">SoundCloud Likes</a>
+                                <a class="dropdown-item" href="{{route('soundcloud.index','likes')}}">SoundCloud Likes</a>
                             </li>
                             <li>
-                                <a class="dropdown-item " href="Soundcouldfollow.html">SoundCloud Follow</a>
+                                <a class="dropdown-item " href="{{route('soundcloud.index','follows')}}">SoundCloud Follow</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="soundcouldplays.html">SoundCloud Plays</a>
+                                <a class="dropdown-item" href="{{route('soundcloud.index','plays')}}">SoundCloud Plays</a>
                             </li>
                         </ul>
                     </li>
@@ -172,24 +172,24 @@
                             Other
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item " href="RedditUpvotes.html">Reddit Upvotes</a></li>
-                            <li><a class="dropdown-item" href="RedditMembers.html">Reddit Members</a></li>
+                            <li><a class="dropdown-item " href="{{route('otherSites.index','redditUpvotes')}}">Reddit Upvotes</a></li>
+                            <li><a class="dropdown-item" href="{{route('otherSites.index','redditMembers')}}">Reddit Members</a></li>
                             <li>
-                                <a class="dropdown-item" href="tlgram.html">Telegram Channels</a>
+                                <a class="dropdown-item" href="{{route('otherSites.index','telegram')}}">Telegram Channels</a>
                             </li>
-                            <li><a class="dropdown-item" href="Pinterest Save.html">Pinterest Save</a></li>
+                            <li><a class="dropdown-item" href="{{route('otherSites.index','pinterestSave')}}">Pinterest Save</a></li>
                             <li>
-                                <a class="dropdown-item" href="Pinterest Followers.html">Pinterest Followers</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="Vkontakte Groups.html">Vkontakte Groups</a>
-                            </li>
-                            <li><a class="dropdown-item" href="Vkontakte Pages.html">Vkontakte Pages</a></li>
-                            <li>
-                                <a class="dropdown-item" href="OK.ru Group Join.html">OK.ru Group Join</a>
+                                <a class="dropdown-item" href="{{route('otherSites.index','pinterestFollowers')}}">Pinterest Followers</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="Reverbnation Fans.html">Reverbnation Fans</a>
+                                <a class="dropdown-item" href="{{route('otherSites.index','vkontakteGroups')}}">Vkontakte Groups</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{route('otherSites.index','vkontaktePages')}}">Vkontakte Pages</a></li>
+                            <li>
+                                <a class="dropdown-item" href="{{route('otherSites.index','okGroup')}}">OK.ru Group Join</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{route('otherSites.index','Reverbnation')}}">Reverbnation Fans</a>
                             </li>
                         </ul>
                     </li>

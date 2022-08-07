@@ -3,7 +3,11 @@
     مكاسـب | تسويق مجاني عبر وسائل التواصل الاجتماعي
 @endsection
 @section('site_css')
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/style.css" />
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/style.css" />
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/style_ar.css" />
+    @endif
 @endsection
 @section('content')
     <header>

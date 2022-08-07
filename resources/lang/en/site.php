@@ -14,5 +14,6 @@ return [
     */
 
     'required' => 'Field Required',
+    'error' => 'sorry invalid',
 
 ];

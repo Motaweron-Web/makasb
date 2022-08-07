@@ -3,8 +3,12 @@
     مكاسـب | مواقعي
 @endsection
 @section('site_css')
-{{--    <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    {{--    <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/conis_ar.css"/>
+    @endif
 @endsection
 @section('content')
     @include('site.layouts.social-navbar')

@@ -28,9 +28,9 @@ class StoreSite extends FormRequest
             "title"              => 'required|max:255',
             "country"            => 'required|array',
             "url"                => 'required',
-            "total_clicks_limit" => 'nullable|numeric|min:1|gte:daily_clicks_limit',
-            "daily_clicks_limit" => 'nullable|numeric|min:1',
-            "points_for_click"   => 'nullable|numeric|min:5|max:50',
+            "total_clicks_limit" => 'required|numeric|min:1|gte:daily_clicks_limit',
+            "daily_clicks_limit" => 'required|numeric|min:1',
+            "points_for_click"   => 'required|numeric|min:5|max:50',
         ];
     }
 

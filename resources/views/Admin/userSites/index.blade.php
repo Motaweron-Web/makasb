@@ -13,11 +13,6 @@
                         يمكنك ( تفعيل \ الغاء تفعيل ) المنتج من خلال الضغط علي كلمة (مفعل \ غير مفعل)
                     </div>
                     <div class="">
-                        <button class="btn btn-secondary btn-icon text-white addBtn">
-									<span>
-										<i class="fe fe-plus"></i>
-									</span> اضافة جديد
-                        </button>
                         @if($count)
                             <button class="btn btn-danger btn-icon text-white" data-toggle="modal" data-target="#deleteAllModal">
 									<span>
@@ -36,8 +31,10 @@
                             <tr class="fw-bolder text-muted bg-light">
                                 <th class="min-w-25px">#</th>
                                 <th class="min-w-50px">المستخدم</th>
-                                <th class="min-w-50px">نوع المنشور</th>
                                 <th class="min-w-50px">عنوان المنشور</th>
+                                <th class="min-w-50px">نوع المنشور</th>
+                                <th class="min-w-50px">الاجمالي المطلوب</th>
+                                <th class="min-w-50px">النقاط لكل مشاهدة</th>
                                 <th class="min-w-50px">الحالة</th>
                                 <th class="min-w-50px rounded-end">العمليات</th>
                             </tr>
@@ -108,8 +105,10 @@
         var columns = [
             {data: 'id', name: 'id'},
             {data: 'user_id', name: 'user_id'},
-            {data: 'site_type', name: 'site_type'},
             {data: 'title', name: 'title'},
+            {data: 'site_type', name: 'site_type'},
+            {data: 'total_clicks_limit', name: 'total_clicks_limit'},
+            {data: 'points_for_click', name: 'points_for_click'},
             {data: 'status', name: 'status'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]

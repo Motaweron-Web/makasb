@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2022 at 01:47 PM
+-- Generation Time: Aug 07, 2022 at 09:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -413,7 +413,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (12, '2022_07_27_153749_create_sites_table', 3),
 (13, '2022_07_28_101427_create_site_countries_table', 4),
 (14, '2022_09_27_152917_create_countries_table', 4),
-(15, '2022_07_28_161137_create_site_infos_table', 5);
+(15, '2022_07_28_161137_create_site_infos_table', 5),
+(16, '2022_08_04_131011_create_points_table', 6);
 
 -- --------------------------------------------------------
 
@@ -432,6 +433,30 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `points`
+--
+
+CREATE TABLE `points` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `number_of_points` int(11) NOT NULL,
+  `price` double NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `points`
+--
+
+INSERT INTO `points` (`id`, `number_of_points`, `price`, `created_at`, `updated_at`) VALUES
+(1, 200, 1, '2022-08-04 11:18:08', '2022-08-04 11:18:08'),
+(2, 1300, 5, '2022-08-04 11:18:08', '2022-08-04 11:18:08'),
+(3, 2500, 5, '2022-08-04 11:18:08', '2022-08-04 11:18:08'),
+(4, 5000, 25, '2022-08-04 11:18:08', '2022-08-04 11:18:08');
 
 -- --------------------------------------------------------
 
@@ -457,7 +482,8 @@ CREATE TABLE `services` (
 INSERT INTO `services` (`id`, `title_ar`, `title_en`, `icon`, `desc_ar`, `desc_en`, `created_at`, `updated_at`) VALUES
 (1, 'نحن القادة', 'We are the leaders', 'fe fe-at-sign', 'نحن رواد في مجال التسويق / الترويج عبر وسائل التواصل الاجتماعي', 'We are the leaders in the field of social media marketing/promotion', '2022-07-20 12:18:04', '2022-07-20 12:18:04'),
 (2, 'احدث المواقع', 'User friendly interface', 'fe fe-x-circle', 'لدينا واجهة سهلة الاستخدام', 'We have user friendly interface', '2022-07-20 12:21:46', '2022-07-21 12:22:38'),
-(3, 'افضل الخدمات', 'Best Services', 'fe fe-award', 'الموقع الاول في الوطن العربي للخدمات الترويجية', 'The first site in the Arab world for promotional services', '2022-07-21 12:24:07', '2022-07-21 12:24:07');
+(3, 'افضل الخدمات', 'Best Services', 'fe fe-award', 'الموقع الاول في الوطن العربي للخدمات الترويجية', 'The first site in the Arab world for promotional services', '2022-07-21 12:24:07', '2022-07-21 12:24:07'),
+(4, 'A occaecat tempor in', 'Perspiciatis ullamc', 'fe fe-mic', 'Veniam eum aut culp', 'Quam perferendis sun', '2022-08-04 15:10:37', '2022-08-04 15:10:37');
 
 -- --------------------------------------------------------
 
@@ -469,13 +495,16 @@ CREATE TABLE `settings` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `feature_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `terms` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `privacy` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `about_us` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `about_us_en` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `terms` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `terms_en` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `privacy` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `privacy_en` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `insta` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `youtube` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `linkedin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `snap` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -484,8 +513,8 @@ CREATE TABLE `settings` (
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `title`, `logo`, `feature_image`, `terms`, `privacy`, `facebook`, `insta`, `youtube`, `linkedin`, `created_at`, `updated_at`) VALUES
-(1, 'مكاسـب', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `settings` (`id`, `title`, `logo`, `about_us`, `about_us_en`, `terms`, `terms_en`, `privacy`, `privacy_en`, `facebook`, `insta`, `snap`, `twitter`, `created_at`, `updated_at`) VALUES
+(1, 'مكاسـب', NULL, 'ماذا عناماذا عناماذا عناماذا عناماذا عناماذا عناماذا عناماذا عنا ماذا عنا', 'whaaaaaaaat about us', 'الشروووووووووووووووووووط والاحكام', 'teeeeeeeeeeerms ', 'سياسة الخصوووووصية', 'privacyyyyyyyyyyyyyyyyyyyyyyy', 'https://www.facebook.com/', 'https://www.instagram.com/', 'https://www.snapchat.com/add/fcbsnap', 'https://twitter.com/page_id', '2022-08-04 11:51:28', '2022-08-04 11:51:28');
 
 -- --------------------------------------------------------
 
@@ -513,11 +542,11 @@ CREATE TABLE `sites` (
 --
 
 INSERT INTO `sites` (`id`, `user_id`, `site_type`, `title`, `url`, `daily_clicks_limit`, `total_clicks_limit`, `needed_clicks`, `points_for_click`, `status`, `created_at`, `updated_at`) VALUES
-(36, 10, 31, 'اريد اعجابات فيسبوك', 'https://www.youtube.com/embed/EZTLNKYf_d4', 2, 40, 40, 25, '1', '2022-07-28 11:15:53', '2022-07-28 11:19:54'),
-(38, 9, 31, 'تفاعلات', 'https://www.youtube.com/embed/EZTLNKYf_d4', 5, 80, 80, 25, '0', '2022-07-28 11:15:58', '2022-07-28 11:22:22'),
-(39, 8, 31, 'عنوان', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fanssahmedhamza%2Fposts%2Fpfbid0fj17peCqdWUoK5xWPCtszVjuXF5QHQwiTZVSPQnHsC5QDkXgpGJY7qdzBUEWrkaLl&show_text=true&width=500', 2, 50, 43, 25, '1', '2022-07-28 11:35:29', '2022-08-01 11:19:23'),
-(40, 6, 31, 'فيران توريس', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbarca.news.arab%2Fposts%2Fpfbid02XVKMQBjZM8LL6mdPu5XzeNvbLit67aQaPssYi8JKGzbwxKcKkLDLndJK6N1v2fL5l', 2, 50, 20, 25, '1', '2022-07-28 11:35:29', '2022-08-01 09:48:39'),
-(41, 10, 31, 'عنوان', 'https://www.facebook.com/photo/?fbid=1071610280457188&set=a.101744710777088', NULL, NULL, NULL, 25, '0', '2022-07-31 12:31:48', '2022-07-31 12:31:48');
+(36, 10, 1, 'اريد اعجابات فيسبوك', 'https://www.youtube.com/embed/EZTLNKYf_d4', 2, 40, 40, 7, '1', '2022-07-28 11:15:53', '2022-07-28 11:19:54'),
+(40, 6, 1, 'فيران توريس', 'https://www.youtube.com/embed/yD66BBLtcM8', 2, 50, 16, 5, '1', '2022-07-28 11:35:29', '2022-08-04 15:01:18'),
+(41, 10, 1, 'عنوان', 'https://www.facebook.com/photo/?fbid=1071610280457188&set=a.101744710777088', 2, 10, 10, 10, '0', '2022-07-31 12:31:48', '2022-07-31 12:31:48'),
+(45, 6, 1, 'فيران توريس', 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbarca.news.arab%2Fposts%2Fpfbid02XVKMQBjZM8LL6mdPu5XzeNvbLit67aQaPssYi8JKGzbwxKcKkLDLndJK6N1v2fL5l', 2, 50, 17, 5, '1', '2022-07-28 11:35:29', '2022-08-04 14:59:54'),
+(48, 10, 1, 'عنوان من ال API', 'https://www.youtube.com/embed/yD66BBLtcM8', 5, 40, 40, 25, '1', '2022-08-04 09:49:49', '2022-08-04 09:49:49');
 
 -- --------------------------------------------------------
 
@@ -539,9 +568,9 @@ CREATE TABLE `site_countries` (
 
 INSERT INTO `site_countries` (`id`, `site_id`, `country_id`, `created_at`, `updated_at`) VALUES
 (15, 36, 3, '2022-07-28 11:15:53', '2022-07-28 11:15:53'),
-(17, 38, 3, '2022-07-28 11:15:58', '2022-07-28 11:15:58'),
-(18, 39, 3, '2022-07-28 11:35:29', '2022-07-28 11:35:29'),
-(19, 41, 2, '2022-07-31 12:31:48', '2022-07-31 12:31:48');
+(19, 41, 2, '2022-07-31 12:31:48', '2022-07-31 12:31:48'),
+(20, 48, 1, '2022-08-04 09:49:50', '2022-08-04 09:49:50'),
+(21, 48, 1, '2022-08-04 09:50:25', '2022-08-04 09:50:25');
 
 -- --------------------------------------------------------
 
@@ -562,7 +591,7 @@ CREATE TABLE `site_infos` (
 --
 
 INSERT INTO `site_infos` (`id`, `site_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(30, 39, 10, '2022-08-01 11:19:23', '2022-08-01 11:19:23');
+(39, 40, 10, '2022-08-04 15:01:18', '2022-08-04 15:01:18');
 
 -- --------------------------------------------------------
 
@@ -601,8 +630,8 @@ INSERT INTO `site_types` (`id`, `title_ar`, `title_en`, `created_at`, `updated_a
 (17, 'اعجابات ساوند كلاود', 'SoundCloud Likes\r\n', '2022-07-27 10:57:48', '2022-07-27 10:57:48'),
 (18, 'متباعين ساوند كلاود', 'SoundCloud Follow\r\n', '2022-07-27 10:58:14', '2022-07-27 10:58:14'),
 (19, 'مشاهدات ساوند كلاود', 'SoundCloud Plays\r\n', '2022-07-27 11:00:09', '2022-07-27 11:00:09'),
-(20, 'مجموعات كونتاكتي', 'kontakte Groups\r\n', '2022-07-27 11:00:41', '2022-07-27 11:00:41'),
-(21, 'صفحات كوناكتي', 'kontakte Pages\r\n', '2022-07-27 11:03:09', '2022-07-27 11:03:09'),
+(20, 'مجموعات كونتاكتي', 'Vkontakte Groups\n', '2022-07-27 11:00:41', '2022-07-27 11:00:41'),
+(21, 'صفحات كوناكتي', 'Vkontakte Pages\n', '2022-07-27 11:03:09', '2022-07-27 11:03:09'),
 (22, 'انضم إلى مجموعة OK.ru', 'OK.ru Group Join', '2022-07-27 11:04:34', '2022-07-27 11:04:34'),
 (23, 'فانز الصدى', 'Reverbnation Fans', '2022-07-27 11:05:16', '2022-07-27 11:05:16'),
 (24, 'اعجابات ومتابعيين فيسـبوك', 'FB Page Likes/Followers', '2022-07-27 13:19:30', '2022-07-27 13:19:30'),
@@ -649,7 +678,7 @@ INSERT INTO `sliders` (`id`, `desc_ar`, `desc_en`, `btn_title_ar`, `btn_title_en
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `balance` double DEFAULT NULL,
+  `balance` double NOT NULL DEFAULT 0,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -663,12 +692,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `balance`, `email`, `password`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
-(5, 'monuqo', 500, 'gagyfyp@mailinator.com', '$2y$10$5mZDeX2EhfJ/BgNwq85lXexwESzjZYpPK5y24hCONk0b3y/Fp1Um.', NULL, NULL, '2022-07-21 13:43:39', '2022-07-21 13:43:39'),
-(6, 'qehocytic', 450, 'tevakuqo@mailinator.com', '$2y$10$C1PLPyJeIY5w9Y26lDeSX.XKPkbyFoEPzWh4OCP43ozYYepuPiy/.', NULL, NULL, '2022-07-21 13:44:55', '2022-08-01 09:48:39'),
+(5, 'monuqo', 500, 'gagyfyp@mailinator.com', '$2y$10$5mZDeX2EhfJ/BgNwq85lXexwESzjZYpPK5y24hCONk0b3y/Fp1Um.', 'assets/uploads/admins/66161658316929.webp', NULL, '2022-07-21 13:43:39', '2022-07-21 13:43:39'),
+(6, 'qehocytic', 405, 'tevakuqo@mailinator.com', '$2y$10$C1PLPyJeIY5w9Y26lDeSX.XKPkbyFoEPzWh4OCP43ozYYepuPiy/.', NULL, NULL, '2022-07-21 13:44:55', '2022-08-04 15:01:18'),
 (7, 'nolatagir', 150, 'notyfeqy@mailinator.com', '$2y$10$WA0A39GCxMsvm/tOWpIAxeEdyubpQUA5QjwIBdujAzzoE7Avgy7NS', NULL, NULL, '2022-07-21 13:52:35', '2022-07-21 13:52:35'),
-(8, 'quwob', 275, 'kiwiz@mailinator.com', '$2y$10$bGNr0xvkWWTIJit21T8n6O1JSOkdTS3L3UWI49Dvc3mIo9IoYKQdy', NULL, NULL, '2022-07-21 13:55:36', '2022-08-01 11:19:23'),
-(9, 'laqegereza', 270, 'lezar@mailinator.com', '$2y$10$rR7TUVhxfbWOanU0h9G9puLKGKCUXJ2VsmnFCHnkJtIiSGsm9z336', NULL, NULL, '2022-07-21 13:56:00', '2022-07-31 13:44:07'),
-(10, 'Ahmed Yahya', 1100, 'ahmedtarekya100@gmail.com', '$2y$10$jlNtPx1Fbn74VS0YHP65iOQ/MFdBiv.hjUyKhVtBUFHFB4MQ1FR8G', NULL, 'h4tHv0IZX3e9yFaur46y3hf8ASWJ7uOxYEKn7GK6PQw0mKAeBVIgQaWZkuac', '2022-07-21 14:15:39', '2022-08-01 11:19:23');
+(10, 'Ahmed Tarek YA', 1145, 'ahmedtarekya100@gmail.com', '$2y$10$ZG1/Ijqxh7VIQ.oM.oGhYOedkgYH0FcayqT/ml0vI0/WszwDAav9e', 'assets/uploads/users/69051659613426.webp', 'ZmYE2qAn92vFH13tyMI9xYTt54G3TjxI1FSOtZ7mNJc9ujGWeseHjoNtz64e', '2022-07-21 14:15:39', '2022-08-04 15:01:18'),
+(19, 'mojha', 25, 'ahmedtarekya@gmail.com', '$2y$10$jlNtPx1Fbn74VS0YHP65iOQ/MFdBiv.hjUyKhVtBUFHFB4MQ1FR8G', 'assets/uploads/users/51831659365954.webp', NULL, '2022-08-01 14:40:12', '2022-08-01 14:59:15'),
+(22, 'test api', 0, 'test@test.com', '$2y$10$PyKfzxfD2lDX8S/rov7I3e3uH3zk/73qqAWzMa7bi4c7IpIs0FUKu', NULL, NULL, '2022-08-04 09:08:54', '2022-08-04 09:08:54'),
+(23, 'test api', 0, 'test2@test.com', '$2y$10$rs52y4lCgmAOMt2oxtoFSuUMqQT9cGWyW5gfeA0xjV4Qx6kZb4zUC', 'assets/uploads/users/14641659604166.webp', NULL, '2022-08-04 09:09:26', '2022-08-04 09:09:26'),
+(24, 'qogijusazo', 0, 'cokonetif@mailinator.com', '$2y$10$Az.UoCWT1JkRrLXEudLUxuBJcJPn63Mei5RvR.SbFepRNN.GvSLJq', NULL, NULL, '2022-08-04 13:13:39', '2022-08-04 13:13:39');
 
 --
 -- Indexes for dumped tables
@@ -725,6 +756,12 @@ ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
+
+--
+-- Indexes for table `points`
+--
+ALTER TABLE `points`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `services`
@@ -822,7 +859,7 @@ ALTER TABLE `feature_lists`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -831,10 +868,16 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `points`
+--
+ALTER TABLE `points`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -846,25 +889,25 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `sites`
 --
 ALTER TABLE `sites`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `site_countries`
 --
 ALTER TABLE `site_countries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `site_infos`
 --
 ALTER TABLE `site_infos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `site_types`
 --
 ALTER TABLE `site_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `sliders`
@@ -876,7 +919,7 @@ ALTER TABLE `sliders`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables

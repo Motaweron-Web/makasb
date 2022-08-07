@@ -5,7 +5,11 @@
 @section('site_css')
     {{--        <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/Conis.css"/>
+    @else
+        <link rel="stylesheet" href="{{asset('assets/site/css')}}/conis_ar.css"/>
+    @endif
 @endsection
 @section('content')
     @include('site.layouts.social-navbar')

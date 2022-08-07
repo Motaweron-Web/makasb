@@ -130,8 +130,11 @@
                     if (data.status == 200) {
                         $('#dataTable').DataTable().ajax.reload();
                         toastr.success('تم الاضافة بنجاح');
-                    } else
-                        toastr.error('There is an error');
+                    } else if(data.status == 405){
+                        toastr.error(data.mymessage);
+                    }
+                    else
+                        toastr.error('هناك خطأ ما ..');
                     $('#addButton').html(`اضافة`).attr('disabled', false);
                     $('#editOrCreate').modal('hide')
                 },

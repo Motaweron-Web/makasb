@@ -29,6 +29,20 @@
         </li>
 
         <li class="slide">
+            <a class="side-menu__item" href="{{route('users.index')}}">
+                <i class="fe fe-user-minus side-menu__icon"></i>
+                <span class="side-menu__label">المستخدمين</span>
+            </a>
+        </li>
+
+{{--        <li class="slide">--}}
+{{--            <a class="side-menu__item" href="{{route('users.index')}}">--}}
+{{--                <i class="fe fe-user-minus side-menu__icon"></i>--}}
+{{--                <span class="side-menu__label">المواقع</span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
+
+        <li class="slide">
             <a class="side-menu__item" href="{{route('services.index')}}">
                 <i class="fe fe-shopping-cart side-menu__icon"></i>
                 <span class="side-menu__label">الخدمات</span>

@@ -39,6 +39,7 @@ class AuthController extends Controller
         $user = User::create($data);
         if ($user){
             Auth::guard('user')->login($user);
+            toastSuccess('مرحبا بك يا '.$request->user_name);
             return redirect('homepage');
         }
         else{
@@ -75,6 +76,10 @@ class AuthController extends Controller
         }
         toastError('بيانات دخول غير صحيحة');
         return back();
+    }
+
+    public function profile(){
+        return view('site.profile');
     }
 
 }

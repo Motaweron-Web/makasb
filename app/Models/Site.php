@@ -42,7 +42,7 @@ class Site extends Model
 
     public function scopeAvailableRows($query)
     {
-        return $query->where('needed_clicks' ,'>', 0)->where('status','1')->where('user_id','<>', Auth::guard('user')->id());
+        return $query->where('needed_clicks' ,'>', 0)->where('status','1')->where('user_id','!=', Auth::guard('user')->id());
     }
 
 }

@@ -32,6 +32,7 @@ Route::group(
 
     Route::group(['middleware' => 'auth:user', 'namespace' => 'Site'], function () {
         Route::get('logout', 'AuthController@logout')->name('logout');
+        Route::get('profile', 'AuthController@profile')->name('profile');
         Route::get('homepage', 'HomeController@homepage')->name('homepage');
         Route::get('MySites', 'HomeController@MySites')->name('MySites');
         Route::get('AddSite', 'HomeController@AddSite')->name('AddSite');
@@ -47,6 +48,26 @@ Route::group(
             Route::get('followers', 'InstagramController@followers')->name('instagram.followers');
             Route::get('likes', 'InstagramController@likes')->name('instagram.likes');
         });
+
+        ##### Twitter ####
+        Route::group(['prefix' => 'twitter'], function () {
+            Route::get('tweets', 'TwitterController@tweets')->name('twitter.tweets');
+            Route::get('followers', 'TwitterController@followers')->name('twitter.followers');
+            Route::get('retweets', 'TwitterController@retweets')->name('twitter.retweets');
+            Route::get('likes', 'TwitterController@likes')->name('twitter.likes');
+        });
+
+        ##### Youtube ####
+        Route::get('youtube/{page}', 'YoutubeController@index')->name('youtube.index');
+
+        ##### Tiktok ####
+        Route::get('tiktok/{page}', 'TiktokController@index')->name('tiktok.index');
+
+        ##### SoundCloud ####
+        Route::get('soundcloud/{page}', 'SoundcloudController@index')->name('soundcloud.index');
+
+        ##### otherSites ####
+        Route::get('otherSites/{page}', 'OtherSitesController@index')->name('otherSites.index');
 
 
 
