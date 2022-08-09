@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | تويتر
+    {{trans('site.twitter')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--            <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -57,7 +57,7 @@
                                         <td>
                                             <div class="text-center">
                                                 <button data-site-id={{$row->id}} data-url="{{$row->url}}"
-                                                        class="Deletes customBtn myShareBtn">Share
+                                                        class="Deletes customBtn myShareBtn">{{trans('site.share')}}
                                                 </button>
                                             </div>
                                         </td>
@@ -66,7 +66,7 @@
                                                 <button class="Delete customBtn skipBtn"
                                                         onclick="HideFrame($(this).attr(('data-id')),$(this).attr('data-url'))"
                                                         data-url="{{$row->url}}"
-                                                        data-id="{{$row->id}}">skip
+                                                        data-id="{{$row->id}}">{{trans('site.skip')}}
                                                 </button>
                                             </div>
                                         </td>

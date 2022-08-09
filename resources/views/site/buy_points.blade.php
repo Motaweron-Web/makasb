@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | النقاط
+{{trans('site.points')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--        <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -70,7 +70,7 @@
                                         </div>
                                         <div class="Prise PriseHover">
                                             <span class="prise">{{$point->number_of_points}}</span>
-                                            <span class="Week">Points</span>
+                                            <span class="Week">{{trans('site.points')}}</span>
                                         </div>
                                     </div>
                                 </a>

@@ -148,7 +148,20 @@ return [
     'Get SoundCloud Music Plays'=>'الحصول علي مشغلات موسيقي السويندكلويد',
     'o get free points by upvoting others Reddit Posts or Comments click on the "upvote"'=>'احصل على نقاط مجانية من خلال التصويت على منشورات Reddit أو التعليقات ، انقر فوق الزر "upvote" ، ثم سيتم فتح المنشور / التعليق مع popUp وبعد التصويت على المنشور / التعليق ، أغلق النافذة المنبثقة بنفسك. لن يحصل المستخدمون الذين لا يغلقون المنبثقة يدويًا على نقاط.',
     'Get Reddit Post - Comments Upvotes'=>'احصل على Reddit Post - التعليقات المؤيدة للتعليقات',
-
+    'Get Reddit Community Members'=>'احصل على أعضاء مجتمع Reddit',
+    'Telegram Channels'=>'قنوات التليجرام',
+    'oGet free points by subscribing/joining others Telegram Channels/Groups'=>'احصل على نقاط مجانية عن طريق الاشتراك / الانضمام إلى قنوات / مجموعات Telegram الأخرى ، يمكنك معرفة قناة / مجموعة Telegram التي تحاول الاشتراك / الانضمام إليها من خلال النقر على زر الاشتراك. يمكنك أيضًا تخطي الأشخاص الذين لا تريد الاشتراك / الانضمام.',
+    'Get Telegram Channel Subscribers'=>'احصل علي مشتركين قناة التيلجرام',
+    'To get free points by saving others pins click on the "SAVE" button'=>'احصل على نقاط مجانية عن طريق الاشتراك / الانضمام إلى قنوات / مجموعات Telegram الأخرى ، يمكنك معرفة قناة / مجموعة Telegram التي تحاول الاشتراك / الانضمام إليها من خلال النقر على زر الاشتراك. يمكنك أيضًا تخطي الأشخاص الذين لا تريد الاشتراك / الانضمام.',
+     'Get Pinterest pin - post Saves'=>'احصل على Pinterest pin - post Saves',
+    'Get Pinterest Followers'=>'احصل على متابعين Pinterest',
+    'Get Vkontakte Group Members'=>'احصل على أعضاء مجموعة فكونتاكتي',
+    'To get free points by saving others pins click on the "SAVE" button, then the pin will'=>'للحصول على نقاط مجانية عن طريق حفظ دبابيس الآخرين ، انقر فوق الزر "حفظ" ، ثم سيتم فتح الدبوس مع popUp وبعد حفظ الدبوس أغلق المنبثقة بنفسك. المستخدمون الذين لا يغلقون المنبثقة يدويًا ، لن يحصلوا على نقاط. للحصول على نقاط مجانية عن طريق حفظ دبابيس الآخرين ، انقر فوق الزر "حفظ" ، ثم سيتم فتح الدبوس مع popUp وبعد حفظ الدبوس أغلق المنبثقة بنفسك. لن يحصل المستخدمون الذين لا يغلقون المنبثقة يدويًا على نقاط.',
+     'Get Vkontakte Page Subscribers'=>'احصل على مشتركي صفحة فكونتاكتي',
+    'o get free points by join others Odnoklassniki Groups click on the "join" button'=>'احصل على نقاط مجانية من خلال الانضمام إلى مجموعات Odnoklassniki الأخرى ، انقر فوق الزر "الانضمام" ، ثم سيتم فتح المجموعة مع popUp وبعد الانضمام إلى المجموعة ، أغلق القائمة المنبثقة بنفسك. لن يحصل المستخدمون الذين لا يغلقون المنبثقة يدويًا على نقاط.',
+    'Get OK.ru Group Join'=>'احصل على الانضمام إلى مجموعة OK.ru',
+    'makasb'=>'مكاسب',
+    'mySites'=>'مواقعي',
 
 
 
