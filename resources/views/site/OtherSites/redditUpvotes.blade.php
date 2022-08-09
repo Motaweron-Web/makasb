@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | ريديت
+    {{trans('site.other')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--            <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -43,13 +43,13 @@
             </div>
 
             <div class="container sectionHight2">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage"> {{trans('site.Wait 9-10 seconds')}} </h3>
                 @if($data->count())
                     <div class="table Reddits">
                         <table class="table-bordered table">
                             <tr>
                                 <th>{{trans('site.points')}}</th>
-                                <th>Name</th>
+                                <th>{{trans('site.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>

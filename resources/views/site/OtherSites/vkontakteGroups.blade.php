@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | كونتاكتي
+    {{trans('site.other')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--            <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -24,16 +24,13 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
                             <h3 class="fs-4 fw-bold TitlePage"> Vkontakte Groups</h3>
-                            <h3 class="fs-5 fw-bold TitlePage2">get FREE points by liking, following and etc. other profiles -
-                                posts </h3>
+                            <h3 class="fs-5 fw-bold TitlePage2">{{trans('site.get FREE points by liking')}}  </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                To get free points by saving other's pins click on the "SAVE" button, then the pin will
-                                be opened with popUp and after save the pin CLOSE the popUp yourself. The users who
-                                don't close manually the popUp, will not receive points.
+                                  {{trans('site.To get free points by saving others pins click on the "SAVE" button')}}
                             </p>
                             <div>
                                 <button class="mainButton Vkontakte"><a href="{{route('publishMySite')}}">
-                                        Get Vkontakte Group Members
+                                    {{trans('site.Get Vkontakte Group Members')}}
                                     </a></button>
                             </div>
                         </div>
@@ -44,13 +41,13 @@
 
 
             <div class="container sectionHight2">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage">  {{trans('site.Wait 9-10 seconds')}}  </h3>
                 @if($data->count())
                     <div class="table Vkontaktes">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
-                                <th>Name</th>
+                                <th>{{trans('site.points')}}</th>
+                                <th>{{trans('sit.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -62,7 +59,7 @@
                                         <td>
                                             <div class="text-center">
                                                 <button data-site-id={{$row->id}} data-url="{{$row->url}}"
-                                                        class="Deletes Vkontakte customBtn myShareBtn">Share
+                                                        class="Deletes Vkontakte customBtn myShareBtn">{{trans('site.share')}}
                                                 </button>
                                             </div>
                                         </td>
@@ -71,7 +68,7 @@
                                                 <button class="Delete Vkontakte customBtn skipBtn"
                                                         onclick="HideFrame($(this).attr(('data-id')),$(this).attr('data-url'))"
                                                         data-url="{{$row->url}}"
-                                                        data-id="{{$row->id}}">skip
+                                                        data-id="{{$row->id}}">{{trans('site.skip')}}
                                                 </button>
                                             </div>
                                         </td>

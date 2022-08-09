@@ -178,6 +178,26 @@ There are limits depending on Twitter user for all Twitter features. Therefore, 
     'Get SoundCloud Music Plays'=>'Get SoundCloud Music Plays',
     'o get free points by upvoting others Reddit Posts or Comments click on the "upvote"'=>'o get free points by upvoting others Reddit Posts or Comments click on the "upvote" button, then the post/comment will be opened with popUp and after upvoting the post/comment CLOSE the popUp yourself. The users who dont close manually the popUp, will not receive points.',
     'Get Reddit Post - Comments Upvotes'=>'Get Reddit Post - Comments Upvotes',
+    'Get Reddit Community Members'=>'Get Reddit Community Members',
+    'Telegram Channels'=>'Telegram Channels',
+    'oGet free points by subscribing/joining others Telegram Channels/Groups'=>'oGet free points by subscribing/joining others Telegram Channels/Groups You can see which Telegram channel/group you are trying to subscribe/join by clicking on the subscribe button. You can also skip those you dont want to subscribe/join.',
+    'Get Telegram Channel Subscribers'=>'Get Telegram Channel Subscribers',
+    'To get free points by saving others pins click on the "SAVE" button'=>'To get free points by saving others pins click on the "SAVE" button, then the pin will be opened with popUp and after save the pin CLOSE the popUp yourself. The users who dont close manually the popUp, will not receive points.',
+    'Get Pinterest pin - post Saves'=>'Get Pinterest pin - post Saves',
+    'Get Pinterest Followers'=>'Get Pinterest Followers',
+    'Get Vkontakte Group Members'=>'Get Vkontakte Group Members',
+    'To get free points by saving others pins click on the "SAVE" button, then the pin will'=>'To get free points by saving others pins click on the "SAVE" button, then the pin will be opened with popUp and after save the pin CLOSE the popUp yourself. The users who dont close manually the popUp, will not receive points. To get free points by saving others pins click on the "SAVE" button, then the pin will be opened with popUp and after save the pin CLOSE the popUp yourself. The users who dont close manually the popUp, will not receive points.',
+     'Get Vkontakte Page Subscribers'=>'Get Vkontakte Page Subscribers',
+    'o get free points by join others Odnoklassniki Groups click on the "join" button,
+                                then the group will be opened with popUp and after join the group CLOSE the popUp
+                                yourself. The users who dont close manually the popUp, will not receive points.',
+    'Get OK.ru Group Join'=>'Get OK.ru Group Join',
+    'o get free points by join others Odnoklassniki Groups click on the "join" button'=>'o get free points by join others Odnoklassniki Groups click on the "join" button,
+                                then the group will be opened with popUp and after join the group CLOSE the popUp
+                                yourself. The users who dont close manually the popUp, will not receive points.',
+    'makasb'=>'Makasb',
+    'mySites'=>'mySites',
+
 
 
 

@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | مواقعي
+     {{trans('site.mySites')}}| {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--    <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -57,9 +57,9 @@
                                         <td>
                                             {{$site->title}}
                                             @if($site->status == '0')
-                                                <span class="badge bg-danger">غير مفعل</span>
+                                                <span class="badge bg-danger">{{trans('site.inactive')}} </span>
                                             @else
-                                                <span class="badge bg-success">مفعل</span>
+                                                <span class="badge bg-success">{{trans('site.active')}}</span>
                                             @endif
                                         </td>
                                         <td>

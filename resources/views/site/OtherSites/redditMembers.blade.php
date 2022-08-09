@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | ريديت
+    {{trans('site.other')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--            <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -24,19 +24,14 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
                             <h3 class="fs-4 fw-bold TitlePage">  Reddit Members</h3>
-                            <h3 class="fs-5 fw-bold TitlePage2">get FREE points by liking, following and etc. other profiles -
-                                posts </h3>
+                            <h3 class="fs-5 fw-bold TitlePage2"> {{trans('site.get FREE points by liking')}}  </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                o get free points by upvoting other's Reddit Posts or Comments click on the "upvote"
-                                button, then the post/comment will be opened with popUp and after upvoting the
-                                post/comment CLOSE the popUp yourself. The users who don't close manually the popUp,
-                                will not receive points.
-
+                                {{trans('site.o get free points by upvoting others Reddit Posts or Comments click on the "upvote"')}}
 
                             </p>
                             <div>
                                 <button class="mainButton Reddit"><a href="{{route('publishMySite')}}">
-                                        Get Reddit Community Members
+                                    {{trans('site.Get Reddit Community Members')}}
                                     </a></button>
                             </div>
                         </div>
@@ -46,13 +41,13 @@
             </div>
 
             <div class="container sectionHight2">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage"> {{trans('site.Wait 9-10 seconds')}} </h3>
                 @if($data->count())
                     <div class="table Reddits">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
-                                <th>Name</th>
+                                <th>{{trans('site.points')}}</th>
+                                <th>{{trans('site.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>

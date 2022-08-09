@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | تويتر
+    {{trans('site.twitter')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
 {{--            <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}

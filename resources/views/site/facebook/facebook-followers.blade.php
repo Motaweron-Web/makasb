@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | فيسـبوك
+    {{trans('site.facebook')}} | {{trans('site.makasb')}}
 @endsection
 @section('site_css')
     {{--        <link rel="stylesheet" href="{{asset('assets/site/css')}}/bootstrap.min.css"/>--}}
@@ -46,8 +46,8 @@
                     <div class="table">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
-                                <th>Name</th>
+                                <th>{{trans('site.points')}}</th>
+                                <th>{{trans('site.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -59,7 +59,7 @@
                                         <td>
                                             <div class="text-center">
                                                 <button data-site-id={{$row->id}} data-url="{{$row->url}}"
-                                                        class="Deletes customBtn myShareBtn">Share
+                                                        class="Deletes customBtn myShareBtn">{{trans('site.share')}}
                                                 </button>
                                             </div>
                                         </td>
@@ -68,7 +68,7 @@
                                                 <button class="Delete customBtn skipBtn"
                                                         onclick="HideFrame($(this).attr(('data-id')),$(this).attr('data-url'))"
                                                         data-url="{{$row->url}}"
-                                                        data-id="{{$row->id}}">skip
+                                                        data-id="{{$row->id}}">{{trans('site.skip')}}
                                                 </button>
                                             </div>
                                         </td>
