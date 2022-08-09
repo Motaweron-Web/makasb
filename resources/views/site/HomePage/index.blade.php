@@ -115,6 +115,7 @@
                 </div>
                 <div class="pointsBuy section">
                     <div class="mainHeading text-center">
+                        @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
                         <h1>
                             <span class="red">B</span>
                             <span class="red">U</span>
@@ -127,6 +128,9 @@
                             <span>T</span>
                             <span>S</span>
                         </h1>
+                        @else
+                        شراء نقاط
+                        @endif
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
@@ -138,7 +142,7 @@
                                 <div>
                                     <div>
                                         <i class="fa-solid fa-money-bill-trend-up"></i>
-                                        <h3 class="fs-">Special Offer</h3>
+                                        <h3 class="fs-">{{trans('site.Special Offer')}}</h3>
                                     </div>
                                     <p>
                                         You can spend less time on Makasb and can get a lot of

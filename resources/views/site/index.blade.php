@@ -70,7 +70,7 @@
                         <input type="checkbox" name="rememberMe" id="remember" />
                         <label class="text-black-50" for="remember">Remember</label>
                     </div>
-                    <a class="text-black-50" href="testpassword.html">Forget password?</a>
+                    <a class="text-black-50" href="{{route('forgetPassword')}}">Forget password?</a>
                 </div>
             </form>
             <div>

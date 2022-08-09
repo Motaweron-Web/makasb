@@ -145,6 +145,10 @@ class AuthController extends Controller
         return redirect()->route('/');
     }
 
+    public function forgetPassword(){
+        return view('site.Auth.forget-password');
+    }
+
 
 
 

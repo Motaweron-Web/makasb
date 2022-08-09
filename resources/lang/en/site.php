@@ -28,6 +28,7 @@ return [
     'save_change'=>'Save Change',
     'change_password'=>'Change Password',
     'new_password'=>'New Password',
+    'Special Offer'=>'Special Offer',
     'confirm_password'=>'Confirm Password',
     'delete_email'=>'Delete Email',
     'FREE Exchange'=>'FREE Exchange',
