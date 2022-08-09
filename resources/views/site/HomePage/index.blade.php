@@ -129,7 +129,9 @@
                             <span>S</span>
                         </h1>
                         @else
-                        شراء نقاط
+                            <h1>
+                            شراء نقاط
+                            </h1>
                         @endif
                     </div>
                     <div class="row">
@@ -145,13 +147,7 @@
                                         <h3 class="fs-">{{trans('site.Special Offer')}}</h3>
                                     </div>
                                     <p>
-                                        You can spend less time on Makasb and can get a lot of
-                                        likes - followers, if you buy points on Makasb. Currently
-                                        we have Special Offer, so you can get 30% More Points .
-                                        IMPORTANT: Do not buy accounts, or spend money for filling
-                                        your account by others, because your account will be
-                                        banned permanently and your links will not be transferred
-                                        to any other account.
+                                        {{trans('site.you_can_spend')}}
                                     </p>
                                 </div>
                             </div>
@@ -165,15 +161,10 @@
                                 <div>
                                     <div>
                                         <i class="fa-solid fa-money-check-dollar"></i>
-                                        <h3>Weekly Unlimited Points</h3>
+                                        <h3>{{trans('site.Weekly Unlimited Points')}}</h3>
                                     </div>
                                     <p>
-                                        Weekly Unlimited Points - it's real! Buy weekly
-                                        subscription to get unlimited points and promote your
-                                        accounts for 50 CPC, that's the fastest way to get a lot
-                                        of likes - followers at Makasb. Note: in subscription
-                                        period, you can continue to get free points and
-                                        participate in affiliate program without any problem.
+                                       {{trans('site.weekly_desc')}}
                                     </p>
                                 </div>
                             </div>

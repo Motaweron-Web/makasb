@@ -28,7 +28,6 @@ Route::group(
     Route::get('register', 'Site\AuthController@register')->name('register');
     Route::POST('UserRegistration', 'Site\AuthController@UserRegistration')->name('UserRegistration');
     Route::get('login', 'Site\AuthController@login')->name('login');
-    Route::get('forgetPassword', 'Site\AuthController@forgetPassword')->name('forgetPassword');
     Route::post('postLogin', 'Site\AuthController@postLogin')->name('postLogin');
 
     Route::group(['middleware' => 'auth:user', 'namespace' => 'Site'], function () {
@@ -88,6 +87,7 @@ Route::group(
         Route::get('pointsPrices/{id}', 'HomeController@pointsPrices')->name('pointsPrices');
 
     });
+    Route::get('forgetPassword', 'Site\AuthController@forgetPassword')->name('forgetPassword');
 
 });
 

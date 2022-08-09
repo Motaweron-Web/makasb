@@ -23,19 +23,18 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
-                            <h3 class="fs-4 fw-bold TitlePage"> SoundCloud Follow</h3>
-                            <h3 class="fs-5 fw-bold TitlePage2">get FREE points by liking, following and etc. other profiles -
-                                posts </h3>
+                            <h3 class="fs-4 fw-bold TitlePage"> {{trans('SoundCloud Follow')}}</h3>
+                            <h3 class="fs-5 fw-bold TitlePage2">
+                                {{trans('site.get FREE points by liking, following and etc. other profiles -posts')}}
+                            </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                To get free points by liking other's SoundCloud Tracks click on the ''like'' button,
-                                then the track will be opened with popUp and after like the track CLOSE the popUp
-                                yourself. The users who don't close manually the popUp, will not receive points.
+                                {{trans('site.to_get_free')}}
 
 
                             </p>
                             <div>
                                 <button class="mainButton SoundCloudss"><a href="{{route('publishMySite')}}">
-                                        Get SoundCloud Followers
+                                        {{trans('site.Get_sound_followers')}}
                                     </a></button>
                             </div>
                         </div>
@@ -45,13 +44,13 @@
             </div>
 
             <div class="container sectionHight2">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage">{{trans('site.Wait 9-10 seconds')}}</h3>
                 @if($data->count())
                     <div class="table SoundClouds">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
-                                <th>Name</th>
+                                <th>{{trans('site.points')}}</th>
+                                <th>{{trans('site.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>

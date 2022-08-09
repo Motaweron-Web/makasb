@@ -57,7 +57,7 @@ class SliderController extends Controller
     public function store(request $request)
     {
         $inputs = $request->validate([
-            'image'         => 'required|mimes:jpeg,jpg,png,gif',
+            'image'         => 'required|mimes:jpeg,jpg,png,gif,svg',
             'desc_ar'       => 'required',
             'desc_en'       => 'required',
             'btn_title_ar'  => 'required|max:255',
@@ -89,7 +89,7 @@ class SliderController extends Controller
     public function update(request $request,$id)
     {
         $inputs = $request->validate([
-            'image'         => 'nullable|mimes:jpeg,jpg,png,gif',
+            'image'         => 'nullable|mimes:jpeg,jpg,png,gif,svg',
             'desc_ar'       => 'required',
             'desc_en'       => 'required',
             'btn_title_ar'  => 'required|max:255',
