@@ -26,9 +26,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-12 col-sm-12">
                                 <div class="typier">
-                                    <h2>Welcome</h2>
-                                    <span class="fs-5 text-black-50">To</span>
-                                    <h3 class="typierEffect active" data-typier="Makasb"></h3>
+                                    <h2> {{trans('site.Welcome')}}</h2>
+                                    <span class="fs-5 text-black-50">{{trans('site.To')}}</span>
+                                    <h3 class="typierEffect active" data-typier="{{trans('site.Makasb')}}"></h3>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12">

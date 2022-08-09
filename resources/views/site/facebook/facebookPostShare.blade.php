@@ -23,16 +23,15 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
-                            <h3 class="fs-4 fw-bold TitlePage"> Facebook Page Share</h3>
-                            <h3 class="fs-5 fw-bold">For this section only - click the FOLLOW button if there is no LIKE button in the pop-up windowA</h3>
+                            <h3 class="fs-4 fw-bold TitlePage"> {{trans('site.Facebook Page Share')}} </h3>
+                            <h3 class="fs-5 fw-bold">{{trans('site.For this section only - click the FOLLOW button')}}    </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                To get free points by sharing other's WebSites click on the "Share" button, then the
-                                page will be opened with popUp and after sharing the website the popUp will be closed
-                                automatically.
+
+                                {{trans('site.To get free points by sharing other')}}
                             </p>
                             <div>
                                 <button class="mainButton"><a href="{{route('publishMySite')}}">
-                                        Get Facebook Post Like
+                                        {{trans('site.Get Facebook Post Like')}}
                                     </a></button>
                             </div>
                         </div>
@@ -41,7 +40,7 @@
                 </div>
             </div>
             <div class="container">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 2-3 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage">{{trans('site.Wait 9-10 seconds')}}</h3>
                 @if($data->count())
                     <div class="table">
                         <table class="table-bordered table">

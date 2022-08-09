@@ -28,15 +28,16 @@
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="buyPointB">
                                 <h3 class="fs-4 fw-bold">
-                                    boost Your promotion and save Your time
+                                    {{trans('site.boost Your promotion and save Your time')}}
                                 </h3>
                                 <p class="fs-6 mt-lg-3  mb-5 lh-base">
-                                    You can choose one of the available payment methods and buy points for Social Media.
-                                    For every bundle purchased from Payrexx, Trust Payments and PaymentWall, you will
-                                    receive <span class="number">30%</span> More Points.
-                                    Your bought (+Bonus) points will be added to your account automatically after
-                                    purchase done.
-                                    You will receive confirmation email immediately after we will credit your account.
+
+                                    {{trans('site.You can choose one of the available')}}
+                                    <span class="number">30%</span>
+                                    {{trans('site.Your bought (+Bonus) points will be added')}}
+
+
+
                                 </p>
                             </div>
                         </div>

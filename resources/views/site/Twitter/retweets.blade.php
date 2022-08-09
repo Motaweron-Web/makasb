@@ -23,20 +23,17 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
-                            <h3 class="fs-4 fw-bold TitlePage"> Twitter Retweets</h3>
-                            <h3 class="fs-5 fw-bold">get FREE points by liking, following and etc. other profiles -
-                                posts </h3>
+                            <h3 class="fs-4 fw-bold TitlePage"> {{trans('site.Twitter Retweets')}} </h3>
+                            <h3 class="fs-5 fw-bold">{{trans('site.get FREE points by liking')}}  </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                Get free points for tweeting other's tweets.
-
-                                There are limits depending on Twitter user for all Twitter features. Therefore, we would advise  you to manage yourself the speed and the amount of your activity in Twitter sections. All responsibility is yours.
+                                {{trans('site.Get free points for tweeting other')}}
 
 
 
                             </p>
                             <div>
                                 <button class="mainButton Twitterss"><a href="{{route('publishMySite')}}">
-                                        Get Twitter Retweets
+                                      {{trans('site.Get Twitter Retweets')}}
                                     </a></button>
                             </div>
                         </div>
@@ -45,13 +42,13 @@
                 </div>
             </div>
             <div class="container">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage">{{trans('site.Wait 9-10 seconds')}} </h3>
                 @if($data->count())
                     <div class="table Twitters">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
-                                <th>Name</th>
+                                <th>{{trans('site.points')}}</th>
+                                <th>{{trans('site.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -63,7 +60,7 @@
                                         <td>
                                             <div class="text-center">
                                                 <button data-site-id={{$row->id}} data-url="{{$row->url}}"
-                                                        class="Deletes customBtn myShareBtn">Share
+                                                        class="Deletes customBtn myShareBtn">{{trans('site.share')}}
                                                 </button>
                                             </div>
                                         </td>
@@ -72,7 +69,7 @@
                                                 <button class="Delete customBtn skipBtn"
                                                         onclick="HideFrame($(this).attr(('data-id')),$(this).attr('data-url'))"
                                                         data-url="{{$row->url}}"
-                                                        data-id="{{$row->id}}">skip
+                                                        data-id="{{$row->id}}">{{trans('site.skip')}}
                                                 </button>
                                             </div>
                                         </td>

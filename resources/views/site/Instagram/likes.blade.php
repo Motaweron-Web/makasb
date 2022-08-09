@@ -23,16 +23,15 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
-                            <h3 class="fs-4 fw-bold TitlePage"> Instagram Followers</h3>
-                            <h3 class="fs-5 fw-bold">get FREE points by liking, following and etc. other profiles - posts </h3>
+                            <h3 class="fs-4 fw-bold TitlePage">{{trans('site.Instagram Followers')}} </h3>
+                            <h3 class="fs-5 fw-bold">{{trans('site.get FREE points by liking, following')}} </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                To get free points by following other's Instagram accounts click on the ''follow'' button, then the account will be opened with popUp and after follow CLOSE the popUp yourself. The users who don't close manually the popUp, will not receive points.
+                                {{trans('site.To get free points by following other')}}
 
-                                If You see blank Instagram page with "Oops an error occurred" message, then just click here or visit instagram.com in new browser tab, and then continue to get FREE points.
                             </p>
                             <div>
                                 <button class="mainButton Instagrams"><a href="{{route('publishMySite')}}">
-                                        Get Instagram LIKE
+                                        {{trans('site.Get Instagram LIKE')}}
                                     </a></button>
                             </div>
                         </div>
@@ -41,13 +40,13 @@
                 </div>
             </div>
             <div class="container">
-                <h3 class="fs-4 fw-bold TitlePage">Wait 9-10 seconds after Follow/Like/Subscribe and then close pop-up window.</h3>
+                <h3 class="fs-4 fw-bold TitlePage">{{trans('site.Wait 9-10 seconds')}}</h3>
                 @if($data->count())
                     <div class="table instagram">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
-                                <th>Name</th>
+                                <th>{{trans('site.points')}} </th>
+                                <th>{{trans('site.name')}}</th>
                                 <th></th>
                                 <th></th>
                             </tr>

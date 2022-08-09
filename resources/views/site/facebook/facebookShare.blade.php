@@ -23,17 +23,16 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
-                            <h3 class="fs-4 fw-bold TitlePage"> Facebook Share</h3>
-                            <h3 class="fs-5 fw-bold TitlePage2">get FREE points by liking, following and etc. other
-                                profiles/posts</h3>
+                            <h3 class="fs-4 fw-bold TitlePage"> {{trans('site.facebook_share')}}  </h3>
+                            <h3 class="fs-5 fw-bold TitlePage2">  {{trans('site.get FREE points by liking')}}</h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                To get free points by sharing other's WebSites click on the "Share" button, then the
-                                page will be opened with popUp and after sharing the website the popUp will be closed
-                                automatically.
+
+                                {{trans('site.To get free points by sharing')}}
                             </p>
                             <div>
                                 <button class="mainButton"><a href="{{route('publishMySite')}}">
-                                        Get Facebook Share
+
+                                        {{trans('site.Get Facebook Share')}}
                                     </a></button>
                             </div>
                         </div>

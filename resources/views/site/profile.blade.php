@@ -35,7 +35,7 @@
                     <form method="post" action="{{route('admin.edit.myProfile')}}" enctype="multipart/form-data">
                         @csrf
                     <div class="card-body active" id="Basic">
-                        <h4 class="card-title TitleBasic">Basic Information</h4>
+                        <h4 class="card-title TitleBasic"> {{trans('site.Basic_Information')}}</h4>
                         <div class="row form-row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -43,35 +43,38 @@
                                         <div class="profile-img"><img src="{{asset(''.$user->image)}}" alt="User" class="hoverZoomLink">
                                         </div>
                                         <div class="upload-img">
-                                            <div class="change-photo-btn"><span><i class="fa fa-upload"></i> Upload
-                                                    Photo</span><input type="file" name="image" class="upload"></div><small
-                                                class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of
-                                                2MB</small>
+                                            <div class="change-photo-btn"><span><i class="fa fa-upload"></i>
+                                                    {{trans('site.Upload_Photo')}}
+
+                                                </span><input type="file" name="image" class="upload"></div><small
+                                                class="form-text text-muted">
+                                                {{trans('site.allow_image')}}
+                                              </small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-group"><label>Username <span class="text-danger">*</span></label><input
+                                <div class="form-group"><label>  {{trans('site.user_name')}} <span class="text-danger">*</span></label><input
                                         type="text"  id="Username" required name="user_name" value="{{$user->user_name}}" class="form-control"  ></div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-group"><label>Email <span class="text-danger">*</span></label><input
+                                <div class="form-group"><label> {{trans('site.email')}} <span class="text-danger">*</span></label><input
                                         type="email" class="form-control" required  name="email" value="{{$user->email}}" id="Email" ></div>
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-group"><label>Balance <span class="text-danger">*</span></label><input
+                                <div class="form-group"><label>{{trans('site.balance')}}  <span class="text-danger">*</span></label><input
                                         type="email" class="form-control" value="{{$user->balance}}" disabled>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-group"><label>Join Date <span
+                                <div class="form-group"><label> {{trans('site.join_date')}}  <span
                                             class="text-danger" >*</span></label><input type="email" class="form-control" value="{{$user->created_at->diffForHumans()}}" disabled>
                                 </div>
                             </div>
                             <div class="mt-2">
-                                <button type="submit" class="mainButton submitButton">save change</button>
+                                <button type="submit" class="mainButton submitButton">{{trans('site.save_change')}}  </button>
                             </div>
                             <style>
                                 .submitButton{
@@ -89,39 +92,36 @@
                     </div>
                     </form>
                     <div class="card-body" id="ChangePassword">
-                        <h4 class="card-title TitleBasic">Change Password</h4>
+                        <h4 class="card-title TitleBasic"> {{trans('site.change_password')}}</h4>
                         <div class="row form-row">
 
                             <div class="col-md-12">
-                                <div class="form-group"><label>New Password <span class="text-danger">*</span></label><input
+                                <div class="form-group"><label> {{trans('site.new_password')}} <span class="text-danger">*</span></label><input
                                       id="newPassword"  type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="form-group"><label>Confirm Password <span
+                                <div class="form-group"><label>    {{trans('site.confirm_password')}} <span
                                             class="text-danger">*</span></label><input   id="confirmPassword"  type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="mt-2">
-                                <button class="mainButton submitButton" onclick="changePassword()" id="changePassword">save change</button>
+                                <button class="mainButton submitButton" onclick="changePassword()" id="changePassword"> {{trans('site.save_change')}}</button>
                             </div>
                         </div>
                     </div>
                     <div class="card-body" id="DeleteEmail">
-                        <h4 class="card-title TitleBasic">DeleteEmail</h4>
+                        <h4 class="card-title TitleBasic">{{trans('site.delete_email')}}</h4>
                         <div class="row form-row">
                             <div class="col-md-12">
                                 <p class="lh-lg">
-                                    By clicking on this button your account will be deleted and all your data added will be
-                                    blocked and will be hidden for everyone. The data(links, accounts and etc.) in this account
-                                    can't be added by other user or transferred to another account. Anytime you can reactivate
-                                    your account by registering with the same email address. Note: After reactivation all points
-                                    on your account will be erased.
+
+                                {{trans('site.delete_message')}}
                             </div>
 
                         </div>
                         <div class="mt-2">
-                            <a href="{{route('admin.deleteMyProfile')}}" class="mainButton submitButton">Delete</a>
+                            <a href="{{route('admin.deleteMyProfile')}}" class="mainButton submitButton">{{trans('site.delete')}}</a>
                         </div>
                     </div>
                 </div>
