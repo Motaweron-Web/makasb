@@ -26,7 +26,7 @@
                         <div class="cpl-lg-6 col-md-6 col-sm-12">
                             <div class="mySiteBox">
                                 <h3 class="fs-4 fw-bold">
-                                    How to add your site?
+                                    {{trans('site.how_site')}}
                                 </h3>
                                 <p class="fs-6 mt-lg-3 lh-lg">
                                     You can add unlimited links, pages, or social media

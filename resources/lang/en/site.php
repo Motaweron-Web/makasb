@@ -16,4 +16,9 @@ return [
     'required' => 'Field Required',
     'error' => 'sorry invalid',
 
+
+    ####### MySites
+    'how_site' => 'How to add your site?',
+
+
 ];
