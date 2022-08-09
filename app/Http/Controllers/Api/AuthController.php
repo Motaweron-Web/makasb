@@ -58,6 +58,7 @@ class AuthController extends Controller
             $data['image'] = $this->saveImage($request->image,'assets/uploads/users');
 
         $user = User::create($data);
+        $user = User::with('sites','sites.type')->find($user->id);
         return $this->returnData('data',$user,'تم اضافة مستخدم جديد');
     }
 

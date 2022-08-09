@@ -75,21 +75,13 @@
                             </div>
                             <div class="col-md-6 col-sm-12 homeInfo">
                                 <h1 class="fs-4 fw-bold">
-                                    What is a subscription and how does it work?
+                                    {{trans('site.What is a subscription and how does it work?')}}
                                 </h1>
                                 <p class="fs-6 mt-lg-3  mb-5 lh-base conisP">
-                                    The concept of the subscription is getting unlimited points
-                                    during the subscription period and simultaneously promoting
-                                    some amount of links depending on your subscription package.
+                                    {{trans('site.The_concept_of_the_subscription')}}
                                     <span class="Note"
-                                    >Note Once your initial subscription period is expired, your
-                      subscription will be automatically renewed. You can cancel
-                      the automatic billing any time. Depending on the payment
-                      method you will be charged fixed time period (exmpl. for
-                      Credit Cards it's one year), then if you want you can
-                      subscribe again. You can subscribe to a plan with more
-                      features or cancel it any time (downgrade is not supported
-                      here).
+                                    >
+                                            {{trans('site.Note Once your initial subscription period')}}
                     </span>
                                 </p>
                             </div>
@@ -104,12 +96,12 @@
                             </div>
                             <div class="col-md-6 col-sm-12 homeInfo">
                                 <h1 class="fs-4 fw-bold">
-                                    What is a simultaneous links count?
+
+                                    {{trans('site.What is a simultaneous links count?')}}
                                 </h1>
                                 <p class="fs-6 mt-lg-3 lh-base  mb-5 conisP">
-                                    It means that you can add unlimited links, but you can promote
-                                    only restricted amount of links at the same time for all
-                                    packs.
+
+                                    {{trans('site.It means that you can add unlimited links')}}
                                 </p>
                             </div>
                         </div>
@@ -123,15 +115,14 @@
                             </div>
                             <div class="col-md-6 col-sm-12 homeInfo">
                                 <h1 class="fs-4 fw-bold">
-                                    What is unlimited bought points count?
+
+                                    {{trans('site.What is unlimited bought points count?')}}
                                 </h1>
                                 <p class="fs-6 mt-lg-3 lh-base  mb-5 conisP">
-                                    During the subscription period you can forget about points
-                                    count, because you will have unlimited points. You can
-                                    continue to get free points and participate in an affiliate
-                                    programm. After the end of the subscription period you can use
-                                    them as usual. During the subscription period you can't use
-                                    your points for other links.
+
+
+                                    {{trans('site.During the subscription period you can forget about points')}}
+
                                 </p>
                             </div>
                         </div>
@@ -144,12 +135,12 @@
                             </div>
                             <div class="col-md-6 col-sm-12 homeInfo">
                                 <h1 class="fs-4 fw-bold">
-                                    Under which CPC will my links be displayed?
+
+                                    {{trans('site.Under which CPC will my links be displayed?')}}
                                 </h1>
                                 <p class="fs-6 mt-lg-3 lh-base conisP">
-                                    The CPC for all links, during the subscription period, will be
-                                    displayed 50. It will give you a maximum performance for your
-                                    campaigns.
+                                    {{trans('site.The CPC for all links')}}
+
                                 </p>
                             </div>
                         </div>

@@ -27,17 +27,11 @@
                             <div class="mySiteBox">
                                 <h3 class="fs-4 fw-bold">
                                     {{trans('site.how_site')}}
+                                    {{trans('site.how_to_add_your_site')}}
                                 </h3>
                                 <p class="fs-6 mt-lg-3 lh-lg">
-                                    You can add unlimited links, pages, or social media
-                                    accounts. Increase your social media activity. Get more and
-                                    more likes, fans, followers and etc..
-                                    Please use the button
-                                    at bottom of this page to ADD Your site, page,
-                                    social media account or any other link, and start a Social Media Marketing
-                                    right now!
-                                    Please carefully read our Terms once again, to not be banned from Makasb because of
-                                    added content.
+                                    {{trans('site.how_to_add_your_site_message')}}
+
                                 </p>
                             </div>
                         </div>
@@ -47,14 +41,14 @@
             <div class="mySiteDown">
                 <div class="container sectionHight2">
                     <div class="text-center section">
-                        <button class="mainButton"><a href="{{route('AddSite')}}">+ Add</a></button>
+                        <button class="mainButton"><a href="{{route('AddSite')}}">+{{trans('site.sites_add')}} </a></button>
                     </div>
                     @if($sites->count())
                         <div class="table">
                             <table class="table-bordered table">
                                 <tr>
-                                    <th>Sites</th>
-                                    <th>Sites Name</th>
+                                    <th> {{trans('site.sites')}} </th>
+                                    <th>  {{trans('site.sites_name')}}</th>
                                     <th></th>
                                 </tr>
                                 @foreach($sites as $site)

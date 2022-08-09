@@ -24,19 +24,16 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="shareBox">
                             <h3 class="fs-4 fw-bold TitlePage"> Reddit Upvotes</h3>
-                            <h3 class="fs-5 fw-bold TitlePage2">get FREE points by liking, following and etc. other profiles -
-                                posts </h3>
+                            <h3 class="fs-5 fw-bold TitlePage2">{{trans('site.get FREE points by liking')}} </h3>
                             <p class="fs-6 mt-lg-3 lh-lg">
-                                o get free points by upvoting other's Reddit Posts or Comments click on the "upvote"
-                                button, then the post/comment will be opened with popUp and after upvoting the
-                                post/comment CLOSE the popUp yourself. The users who don't close manually the popUp,
-                                will not receive points.
+                                {{trans('site.o get free points by upvoting others Reddit Posts or Comments click on the "upvote"')}}
+
 
 
                             </p>
                             <div>
                                 <button class="mainButton Reddit"><a href="{{route('publishMySite')}}">
-                                        Get Reddit Post - Comments Upvotes
+                                     {{trans('site.Get Reddit Post - Comments Upvotes')}}
                                     </a></button>
                             </div>
                         </div>
@@ -51,7 +48,7 @@
                     <div class="table Reddits">
                         <table class="table-bordered table">
                             <tr>
-                                <th>Points</th>
+                                <th>{{trans('site.points')}}</th>
                                 <th>Name</th>
                                 <th></th>
                                 <th></th>
@@ -64,7 +61,7 @@
                                         <td>
                                             <div class="text-center">
                                                 <button data-site-id={{$row->id}} data-url="{{$row->url}}"
-                                                        class="Deletes Reddit customBtn myShareBtn">Share
+                                                        class="Deletes Reddit customBtn myShareBtn">  {{trans('site.share')}}
                                                 </button>
                                             </div>
                                         </td>
@@ -73,7 +70,7 @@
                                                 <button class="Delete Reddit customBtn skipBtn"
                                                         onclick="HideFrame($(this).attr(('data-id')),$(this).attr('data-url'))"
                                                         data-url="{{$row->url}}"
-                                                        data-id="{{$row->id}}">skip
+                                                        data-id="{{$row->id}}"> {{trans('site.skip')}}
                                                 </button>
                                             </div>
                                         </td>

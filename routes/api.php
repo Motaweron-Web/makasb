@@ -35,6 +35,7 @@ Route::group([ 'middleware' => 'api','namespace' => 'Api'], function () {
     ### Points
     route::get('latestPoints','PointController@latestPoints');
     route::get('allPoints','PointController@allPoints');
+    route::get('pointsPrices','PointController@pointsPrices');
 
     ### Setting
     route::get('setting','SettingController@setting');

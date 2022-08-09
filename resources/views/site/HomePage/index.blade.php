@@ -26,9 +26,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-12 col-sm-12">
                                 <div class="typier">
-                                    <h2>Welcome</h2>
-                                    <span class="fs-5 text-black-50">To</span>
-                                    <h3 class="typierEffect active" data-typier="Makasb"></h3>
+                                    <h2> {{trans('site.Welcome')}}</h2>
+                                    <span class="fs-5 text-black-50">{{trans('site.To')}}</span>
+                                    <h3 class="typierEffect active" data-typier="{{trans('site.Makasb')}}"></h3>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -42,6 +42,7 @@
                 <div class="pointsFree section">
                     <div class="mainHeading text-center">
                         <h1>
+                            @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
                             <span class="red">F</span>
                             <span class="red">R</span>
                             <span class="red">E</span>
@@ -53,6 +54,9 @@
                             <span>N</span>
                             <span>T</span>
                             <span>S</span>
+                            @else
+                            نقاط مجانية
+                            @endif
                         </h1>
                     </div>
                     <div class="row">
@@ -65,14 +69,10 @@
                                 <div>
                                     <div>
                                         <i class="fa-solid fa-right-left"></i>
-                                        <h3>FREE Exchange</h3>
+                                        <h3>{{trans('site.FREE Exchange')}}</h3>
                                     </div>
                                     <p>
-                                        Get
-                                        <span> Free </span>
-                                        Points by liking - following others' pages - profiles and
-                                        etc. You can get unlimited points and promote unlimited
-                                        accounts and not spending even a single cent.
+                                        {{trans('site.get_free')}}
                                     </p>
                                 </div>
                             </div>
@@ -86,12 +86,10 @@
                                 <div>
                                     <div>
                                         <i class="fa-solid fa-hand-point-down"></i>
-                                        <h3>Daily Bonus Points</h3>
+                                        <h3>{{trans('site.Daily Bonus Points')}}</h3>
                                     </div>
                                     <p>
-                                        We give Daily Active users Daily Bonus Points (400 and
-                                        more daily bonus points for at least daily 100 clicks). So
-                                        you can get Free Points and also Daily Bonus points.
+                                       {{trans('site.we_give_daily')}}
                                     </p>
                                 </div>
                             </div>
@@ -105,15 +103,10 @@
                                 <div>
                                     <div>
                                         <i class="fa-solid fa-user-plus"></i>
-                                        <h3>Invite Your Friends</h3>
+                                        <h3>{{trans('site.Invite Your Friends')}}</h3>
                                     </div>
                                     <p>
-                                        Get
-                                        <span> 300 </span>
-                                        points by participating in our Affiliate Program. Share
-                                        your short referral link anywhere (on your website, blog
-                                        or on any social media platform) in order to be able to
-                                        register new users on Makasb.
+                                        {{trans('site.get_300')}}
                                     </p>
                                 </div>
                             </div>

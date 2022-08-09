@@ -25,14 +25,14 @@
                             data-scroll="Home"
                             aria-current="page"
                             href="{{route('MySites')}}"
-                        >My Sites</a
+                        >{{trans('site.my_sites')}}</a
                         >
                     </li>
+{{--                    <li class="nav-item me-3 ">--}}
+{{--                        <a class="nav-link" data-scroll="Features" href="{{route('subscription')}}">{{trans('site.subscription')}}</a>--}}
+{{--                    </li>--}}
                     <li class="nav-item me-3 ">
-                        <a class="nav-link" data-scroll="Features" href="{{route('subscription')}}">Subscription</a>
-                    </li>
-                    <li class="nav-item me-3 ">
-                        <a class="nav-link" data-scroll="coins" href="{{route('buyPoints')}}">Buy Points</a>
+                        <a class="nav-link" data-scroll="coins" href="{{route('buyPoints')}}"> {{trans('site.buy_points')}}</a>
                     </li>
                     <li class="nav-item dropdown ">
                         <a
@@ -43,18 +43,18 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i class="fa-brands fa-facebook-square me-1"></i>Facebook
+                            <i class="fa-brands fa-facebook-square me-1"></i>{{trans('site.facebook')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{route('facebookShare')}}">Facebook Share</a></li>
+                            <li><a class="dropdown-item" href="{{route('facebookShare')}}"> {{trans('site.facebook_share')}} </a></li>
                             <li>
-                                <a class="dropdown-item" href="{{route('facebookFollowers')}}">Facebook Followers</a>
+                                <a class="dropdown-item" href="{{route('facebookFollowers')}}"> {{trans('site.facebook_followers')}} </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{route('facebookPostLike')}}">Facebook Post Like</a>
+                                <a class="dropdown-item" href="{{route('facebookPostLike')}}"> {{trans('site.facebook_post_like')}}  </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{route('facebookPostShare')}}">Facebook Post Share</a>
+                                <a class="dropdown-item" href="{{route('facebookPostShare')}}">{{trans('site.facebook_post_share')}}  </a>
                             </li>
                         </ul>
                     </li>
@@ -67,13 +67,13 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i class="fa-brands fa-instagram me-1"></i>Instagram
+                            <i class="fa-brands fa-instagram me-1"></i> {{trans('site.instagram')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="{{route('instagram.followers')}}">Instagram Followers</a>
+                                <a class="dropdown-item" href="{{route('instagram.followers')}}">{{trans('site.instagram_followers')}}  </a>
                             </li>
-                            <li><a class="dropdown-item" href="{{route('instagram.likes')}}">Instagram Like</a></li>
+                            <li><a class="dropdown-item" href="{{route('instagram.likes')}}">{{trans('site.instagram_like')}}  </a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown ">
@@ -85,17 +85,17 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i class="fa-brands fa-twitter me-1"></i>Twitter
+                            <i class="fa-brands fa-twitter me-1"></i>{{trans('site.twitter')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{route('twitter.tweets')}}">Twitter Tweets</a></li>
+                            <li><a class="dropdown-item" href="{{route('twitter.tweets')}}"> {{trans('site.twitter_tweets')}}    </a></li>
                             <li>
-                                <a class="dropdown-item" href="{{route('twitter.followers')}}">Twitter Followers</a>
+                                <a class="dropdown-item" href="{{route('twitter.followers')}}">{{trans('site.twitter_followers')}}  </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{route('twitter.retweets')}}">Twitter Retweets</a>
+                                <a class="dropdown-item" href="{{route('twitter.retweets')}}">{{trans('site.twitter_retweets')}}  </a>
                             </li>
-                            <li><a class="dropdown-item" href="{{route('twitter.likes')}}">Twitter Likes</a></li>
+                            <li><a class="dropdown-item" href="{{route('twitter.likes')}}">{{trans('site.twitter_likes')}}  </a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown ">
@@ -107,14 +107,14 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i class="fa-brands fa-youtube me-1"></i>YouTube
+                            <i class="fa-brands fa-youtube me-1"></i>{{trans('site.youtube')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="{{route('youtube.index','subscribe')}}">YouTube Subscribe</a>
+                                <a class="dropdown-item" href="{{route('youtube.index','subscribe')}}">{{trans('site.youtube_subscribe')}}  </a>
                             </li>
-                            <li><a class="dropdown-item" href="{{route('youtube.index','likes')}}">YouTube Likes</a></li>
-                            <li><a class="dropdown-item" href="{{route('youtube.index','views')}}">YouTube Views</a></li>
+                            <li><a class="dropdown-item" href="{{route('youtube.index','likes')}}">{{trans('site.youtube_likes')}}  </a></li>
+                            <li><a class="dropdown-item" href="{{route('youtube.index','views')}}">{{trans('site.youtube_views')}} </a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown ">
@@ -126,14 +126,14 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i class="fa-brands fa-tiktok me-1"></i>TikTok
+                            <i class="fa-brands fa-tiktok me-1"></i>{{trans('site.tiktok')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="{{route('tiktok.index','followers')}}">TikTok Followers</a>
+                                <a class="dropdown-item" href="{{route('tiktok.index','followers')}}">{{trans('site.tiktok_followers')}} </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{route('tiktok.index','likes')}}">TikTok Video Likes</a>
+                                <a class="dropdown-item" href="{{route('tiktok.index','likes')}}">{{trans('site.tiktok_video_likes')}}  </a>
                             </li>
                         </ul>
                     </li>
@@ -146,17 +146,17 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i class="fa-brands fa-soundcloud me-1"></i>SoundCloud
+                            <i class="fa-brands fa-soundcloud me-1"></i>{{trans('site.soundcloud')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="{{route('soundcloud.index','likes')}}">SoundCloud Likes</a>
+                                <a class="dropdown-item" href="{{route('soundcloud.index','likes')}}">{{trans('site.soundcloud_likes')}} </a>
                             </li>
                             <li>
-                                <a class="dropdown-item " href="{{route('soundcloud.index','follows')}}">SoundCloud Follow</a>
+                                <a class="dropdown-item " href="{{route('soundcloud.index','follows')}}">{{trans('site.soundcloud_follow')}} </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{route('soundcloud.index','plays')}}">SoundCloud Plays</a>
+                                <a class="dropdown-item" href="{{route('soundcloud.index','plays')}}">{{trans('site.soundcloud_plays')}} </a>
                             </li>
                         </ul>
                     </li>
@@ -169,13 +169,13 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            Other
+                            {{trans('site.other')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item " href="{{route('otherSites.index','redditUpvotes')}}">Reddit Upvotes</a></li>
                             <li><a class="dropdown-item" href="{{route('otherSites.index','redditMembers')}}">Reddit Members</a></li>
                             <li>
-                                <a class="dropdown-item" href="{{route('otherSites.index','telegram')}}">Telegram Channels</a>
+                                <a class="dropdown-item" href="{{route('otherSites.index','telegram')}}">{{trans('site.telegram_channels')}}  </a>
                             </li>
                             <li><a class="dropdown-item" href="{{route('otherSites.index','pinterestSave')}}">Pinterest Save</a></li>
                             <li>
@@ -186,7 +186,7 @@
                             </li>
                             <li><a class="dropdown-item" href="{{route('otherSites.index','vkontaktePages')}}">Vkontakte Pages</a></li>
                             <li>
-                                <a class="dropdown-item" href="{{route('otherSites.index','okGroup')}}">OK.ru Group Join</a>
+                                <a class="dropdown-item" href="{{route('otherSites.index','okGroup')}}"> OK.ru Group Join</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="{{route('otherSites.index','Reverbnation')}}">Reverbnation Fans</a>
