@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Mail\AdmainMail;
+use App\Mail\resetPassword;
 use App\Models\User;
 use App\Traits\PhotoTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -49,7 +52,7 @@ class AuthController extends Controller
     }
 
     public function logout(){
-        user()->logout();
+        Auth::guard('user')->logout();
         toastr()->info('تم تسجيل الخروج');
         return redirect('login');
     }
@@ -149,6 +152,38 @@ class AuthController extends Controller
         return view('site.Auth.forget-password');
     }
 
+    public function resetPassword(Request $request){
+
+        $user=User::where('email',$request->email)->first();
+        if($user==null){
+            return response()->json(['status'=>false]);
+        }
+
+
+        $details=['id'=>$user->id,'name'=>$user->user_name,'email'=>$user->email];
+        Mail::to($user->email)->send(new resetPassword($details));
+
+
+
+         return response()->json(['status'=>true]);
+
+
+
+
+    }
+    public function editPasswordFromMail(Request $request,$id){
+
+        $user=User::find($id);
+        $user->password=Hash::make($request->password);
+        $user->save();
+
+
+        Auth::guard('user')->login($user);
+        toastSuccess('مرحبا بك يا '.$user->user_name);
+
+        return redirect()->route('homepage');
+
+    }
 
 
 

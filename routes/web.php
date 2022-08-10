@@ -24,6 +24,11 @@ Route::group(
 
     Route::get('/', 'Site\HomeController@index')->name('/');
 
+    Route::get('rest/password','Site\AuthController@resetPassword')->name('resetPassword');
+
+    Route::get('edit/password/fromMail/{id}','Site\AuthController@editPasswordFromMail')->name('editPasswordFromMail');
+
+
 ############# User Auth ##################
     Route::get('register', 'Site\AuthController@register')->name('register');
     Route::POST('UserRegistration', 'Site\AuthController@UserRegistration')->name('UserRegistration');

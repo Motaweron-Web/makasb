@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -36,5 +37,6 @@ class AuthController extends Controller {
         toastr()->info('تم تسجيل الخروج');
         return redirect('admin/login');
     }
+
 
 }//end class

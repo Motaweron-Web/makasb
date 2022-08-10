@@ -37,7 +37,6 @@
                     <div class="fxt-inner-wrap">
                         <h2 class="fxt-page-title">Reset Password</h2>
                         <p class="fxt-description">Enter the email address associated with your account.</p>
-                        <form method="POST">
                             <label for="reset" class="fxt-label">Email</label>
                             <div class="row">
                                 <div class="col-12">
@@ -47,11 +46,10 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <button type="submit" class="mainButton2"><a href="#">Continue</a></button>
+                                        <button   class="mainButton2"  onclick="resetPassword()" id="resetPassword-now">Continue</button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
                         <div class="fxt-switcher-description">Return to?<a href="{{route('/')}}" class="fxt-switcher-text ms-1">Log in</a></div>
                     </div>
                 </div>
@@ -62,5 +60,77 @@
         .scrollTop{
             display: none !important;
         }
+        .mainButton, .mainButton2 {
+            font-size: 18px;
+            display: inline-block;
+            padding: 10px 15px;
+            color: var(--blue-main);
+        }
     </style>
 @endsection
+
+@section('site-js')
+
+    <script>
+
+
+        function resetPassword() {
+
+            var email = $('#reset').val();
+
+            if (email =='') {
+                toastr.error('يرجي ادخال الايميل اولا');
+
+            }
+           else {
+
+                $.ajax({
+                    type:'GET',
+                    url:"{{route('resetPassword')}}",
+                    data:{
+                        email:email,
+                    },
+
+                    success:function(res){
+                        if(res['status']==true)
+                        {
+
+                            toastr.success('تم ارسال لينك تغير كلمة مرورك');
+
+
+                        }
+                        else if(res['status']==false)
+                        {
+                            toastr.error('يرجي ادخال ايميل مسجل لدينا  ');
+
+                        }
+                        else
+                        {
+                           location.reload();
+
+                        }
+
+                    },
+                    error: function(data){
+                        location.reload();
+                    }
+                });
+
+
+
+
+            }
+
+        }
+
+
+
+
+
+    </script>
+
+
+@endsection
+
+
+
