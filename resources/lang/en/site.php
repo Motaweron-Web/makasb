@@ -29,6 +29,9 @@ return [
     'change_password'=>'Change Password',
     'new_password'=>'New Password',
     'Special Offer'=>'Special Offer',
+    'SoundCloud Follow'=>'SoundCloud Follow',
+    'to_get_free'=>'To get free points by liking others SoundCloud Tracks click on the like button,then the track will be opened with popUp and after like the track CLOSE the popUp yourself. The users who dont close manually the popUp, will not receive points.',
+    'get FREE points by liking, following and etc. other profiles -posts'=>'get FREE points by liking, following and etc. other profiles -posts',
     'confirm_password'=>'Confirm Password',
     'delete_email'=>'Delete Email',
     'FREE Exchange'=>'FREE Exchange',
@@ -146,7 +149,7 @@ return [
 
    'Get Instagram LIKE'=>'Get Instagram LIKE',
     'points'=>'Points',
-    'name'=>'Name',
+    'name'=>'Message',
     'Twitter Tweets'=>'Twitter Tweets',
    'Get free points for tweeting other'=>'  Get free points for tweeting others tweets.
 There are limits depending on Twitter user for all Twitter features. Therefore, we would advise  you to manage yourself the speed and the amount of your activity in Twitter sections. All responsibility is yours.
@@ -177,6 +180,7 @@ There are limits depending on Twitter user for all Twitter features. Therefore, 
     'Get SoundCloud Music Likes'=>'Get SoundCloud Music Likes',
     'SoundCloud Plays'=>'SoundCloud Plays',
     'Get SoundCloud Music Plays'=>'Get SoundCloud Music Plays',
+    'Get_sound_followers'=>'Get SoundCloud followers',
     'o get free points by upvoting others Reddit Posts or Comments click on the "upvote"'=>'o get free points by upvoting others Reddit Posts or Comments click on the "upvote" button, then the post/comment will be opened with popUp and after upvoting the post/comment CLOSE the popUp yourself. The users who dont close manually the popUp, will not receive points.',
     'Get Reddit Post - Comments Upvotes'=>'Get Reddit Post - Comments Upvotes',
     'Get Reddit Community Members'=>'Get Reddit Community Members',
@@ -197,9 +201,47 @@ There are limits depending on Twitter user for all Twitter features. Therefore, 
                                 then the group will be opened with popUp and after join the group CLOSE the popUp
                                 yourself. The users who dont close manually the popUp, will not receive points.',
     'makasb'=>'Makasb',
+
+
+
+
+
+
+
+
+    #### Index #####
     'mySites'=>'mySites',
+    'free_market'=>'Free Social Media Marketing',
+    'Services'=>'Services',
+    'About Us'=>'About Us',
+    'Features'=>'Features',
+    'coins'=>'coins',
+    'lang'=>'Select Language',
+    'en'=>'English',
+    'ar'=>'عربي',
+    'login'=>'Login',
+    'Remember'=>'Remember',
+    'Forget password?'=>'Forget password ?',
+    'Registration'=>'Registration',
+    'password'=>'password',
+    'weekly_desc'=>' Weekly Unlimited Points - its real! Buy weekly subscription to get unlimited points and promote your accounts for 50 CPC, thats the fastest way to get a lot of likes - followers at Makasb. Note: in subscription period, you can continue to get free points and participate in affiliate program without any problem.',
+    'Weekly Unlimited Points'=>'Weekly Unlimited Points',
+    'you_can_spend'=>'You can spend less time on Makasb and can get a lot of likes - followers, if you buy points on Makasb. Currently we have Special Offer, so you can get 30% More Points . IMPORTANT: Do not buy accounts, or spend money for filling your account by others, because your account will be banned permanently and your links will not be transferred to any other account.',
+    'Get FREE Facebook Likes, Followers, Share'=>'Get FREE Facebook Likes, Followers, Share',
+    'facebook_is_fastest'=>'Facebook is the fastest growing and most renowned social network of the world, With the help of Makasb, you can gain thousands of likes, followers and shares ABSOLUTELY FOR FREE.',
+    'Facebook Likes Page or Post'=>'Facebook Likes Page or Post',
+    "Facebook Share Page or Post" => "Facebook Share Page or Post" ,
+    "facebookSharePage" => "Facebook Share Page Post" ,
+    "facebookFollowers" => "Facebook followers" ,
+    "Get FREE YouTube Views, Subscribers, Likes" => "Get FREE YouTube Views, Subscribers, Likes" ,
+    "Get_FREE_Twitter_Followers_Tweets_reTweets_and_Likes" => "Get FREE Twitter Followers, Tweets, reTweets and Likes" ,
+    "twitter_is_the_greatest" => "Twitter is one of the greatest ways to keep in touch with people, to express your feelings, and to be informed of everything. Consequently, it's crucial for You to be active on Twitter as much as possible and to have many followers." ,
+    "Get FREE FInstagram Followers and Instagram Photo Likes" => "Get FREE FInstagram Followers and Instagram Photo Likes" ,
+    "insta_is_the_shortest" => "Instagram is one of the shortest and funniest ways to share your life events with friends through various pictures. Makasb will help you to get more Instagram followers and lso likes for your Instagram photos" ,
 
-
+    'Instagram_Followers'=>'Instagram Followers',
+    'Instagram_PhotoLikes'=>'Instagram Photo Likes',
+    'youtube_desc'=>' If you have a video on the worlds biggest video platform: YouTube, you have also a great chance to promote your video receiving views, likes and favorites. Makasb gives you also the opportunity to increase the amount of your YouTube channel subscribers. And whats the important thing is that You can get all this for free , with quality and in the fastest way',
 
 
 

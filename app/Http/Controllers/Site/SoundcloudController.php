@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SoundcloudController extends Controller
 {
     public function index($page){
-        if($page == "followers"){
+        if($page == "follows"){
             $data = (new \App\Http\Helper\GlobalSelection)->availableRows(18);
             return view('site.SoundCloud.followers', compact('data'));
         }

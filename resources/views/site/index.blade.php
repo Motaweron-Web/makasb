@@ -1,6 +1,6 @@
 @extends('site.layouts.master')
 @section('page_name')
-    مكاسـب | تسويق مجاني عبر وسائل التواصل الاجتماعي
+    {{trans('site.makasb')}} | {{trans('site.free_market')}}
 @endsection
 @section('site_css')
     @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
@@ -22,24 +22,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-3 mb-lg-0 navTopLink">
                     <li class="nav-item">
-                        <a class="nav-link active me-3" data-scroll="Home" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active me-3" data-scroll="Home" aria-current="page" href="#">{{trans('site.Home')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-3" data-scroll="Services" href="#">Services</a>
+                        <a class="nav-link me-3" data-scroll="Services" href="#">{{trans('site.Services')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-3" data-scroll="About" href="#">About Us</a>
+                        <a class="nav-link me-3" data-scroll="About" href="#">{{trans('site.About Us')}}</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link" data-scroll="Features" href="#">Features</a>
+                        <a class="nav-link" data-scroll="Features" href="#">{{trans('site.Features')}}</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" data-scroll="coins" href="#">coins</a>
+                        <a class="nav-link" data-scroll="coins" href="#">{{trans('site.coins')}}</a>
                     </li>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false">
-                            Select Language
+                            {{trans('site.lang')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -61,20 +61,20 @@
             <form action="{{route('postLogin')}}" method="post" class="Login">
                 @csrf
                 <div class="filedLogin">
-                    <input type="email" required placeholder="Email" name="email" id="email" />
-                    <input type="password" required name="password" placeholder="Password" />
-                    <button type="submit" class="siadeButton"><a>Login </a></button>
+                    <input type="email" required placeholder="{{trans('site.email')}}" name="email" id="email" />
+                    <input type="password" required name="password" placeholder="{{trans('site.password')}}" />
+                    <button type="submit" class="siadeButton"><a>{{trans('site.login')}} </a></button>
                 </div>
                 <div class="remember d-flex justify-content-between">
                     <div>
                         <input type="checkbox" name="rememberMe" id="remember" />
-                        <label class="text-black-50" for="remember">Remember</label>
+                        <label class="text-black-50" for="remember">{{trans('site.Remember')}}</label>
                     </div>
-                    <a class="text-black-50" href="{{route('forgetPassword')}}">Forget password?</a>
+                    <a class="text-black-50" href="{{route('forgetPassword')}}">{{trans('site.Forget password?')}}</a>
                 </div>
             </form>
             <div>
-                <button class="mainButton X"><a href="{{route('register')}}">Registration </a></button>
+                <button class="mainButton X"><a href="{{route('register')}}">{{trans('site.Registration')}} </a></button>
             </div>
         </div>
     </nav>
@@ -88,9 +88,9 @@
                 <input type="email" placeholder="Email" id="email" class="mb-2" />
                 <input type="password" placeholder="Password" class="mb-1" />
                 <div class="mb-3 ms-3">
-                    <a class="text-black-50 fs-6" href="#">Forget password?</a>
+                    <a class="text-black-50 fs-6" href="#">{{trans('site.Forget password?')}}</a>
                 </div>
-                <button class="siadeButton"><a href="">Login </a></button>
+                <button class="siadeButton"><a href="">{{trans('site.login')}} </a></button>
             </div>
 
         </form>
@@ -102,9 +102,9 @@
             </div>
 
             <div>
-                <button class="mainButton"><a href="" class="showLoginRight">Login </a></button>
+                <button class="mainButton"><a href="" class="showLoginRight">{{trans('site.login')}} </a></button>
                 <span class="or fs-4 ms-2">or</span>
-                <button class="mainButton  ms-2"><a href="Registration.html">Registration </a></button>
+                <button class="mainButton  ms-2"><a href="Registration.html">{{trans('site.Registration')}} </a></button>
             </div>
         </div>
     </nav>
@@ -148,6 +148,7 @@
 <section class="section" id="Services">
     <div class="container">
         <div class="mainHeading text-center">
+            @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
             <h1>
                 <span>S</span>
                 <span>E</span>
@@ -158,6 +159,11 @@
                 <span>E</span>
                 <span>S</span>
             </h1>
+            @else
+                <h1>
+                الخدمات
+                </h1>
+            @endif
         </div>
         <style>
             .servicesBox i{
@@ -192,6 +198,7 @@
 <section class="section" id="About">
     <div class="container">
         <div class="mainHeading text-center">
+            @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
             <h1>
                 <span>A</span>
                 <span>B</span>
@@ -202,6 +209,11 @@
                 <span>U</span>
                 <span>S</span>
             </h1>
+            @else
+                <h1>
+                    ماذا عنا
+                </h1>
+            @endif
         </div>
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 col-md-12">
@@ -229,110 +241,85 @@
             <div class="col-lg-6 col-sm-12">
                 <div class="FeaturesBox">
                     <div class="linkSocial">
-                        <button class="mainButton3 active me-5 mb-3 " data-show="Facebook">Facebook</button>
-                        <button class="mainButton3  me-5 mb-3 " data-show="Twitter">Twitter</button>
-                        <button class="mainButton3  me-5 mb-3 " data-show="Instagram">Instagram</button>
-                        <button class="mainButton3  me-5 mb-3 " data-show="YouTube">YouTube</button>
+                        <button class="mainButton3 active me-5 mb-3 " data-show="Facebook">{{trans('site.facebook')}}</button>
+                        <button class="mainButton3  me-5 mb-3 " data-show="Twitter">{{trans('site.twitter')}}</button>
+                        <button class="mainButton3  me-5 mb-3 " data-show="Instagram">{{trans('site.instagram')}}</button>
+                        <button class="mainButton3  me-5 mb-3 " data-show="YouTube">{{trans('site.youtube')}}</button>
                     </div>
                     <div class="pt-3">
                         <div class="facebook active" id="Facebook">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span> Facebook Likes,
-                                Followers, Share
+                                {{trans('site.Get FREE Facebook Likes, Followers, Share')}}
                             </h2>
                             <p class="lh-base">
-                                Facebook is the fastest growing and most renowned social
-                                network of the world, With the help of Makasb, you can gain
-                                thousands of likes, followers and shares ABSOLUTELY FOR
-                                FREE.
+                                {{trans('site.facebook_is_fastest')}}
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i> Facebook Likes
-                                    Page <span class="text-black-50">or</span> Post
+                                    <i class="fa-solid fa-square-check"></i>
+                                    {{trans('site.Facebook Likes Page or Post')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> Facebook Share
-                                    Page <span class="text-black-50">or</span> Post
+                                    <i class="fa-solid fa-square-check"></i>
+                                    {{trans('site.facebookSharePage')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> Facebook
-                                    Followers
+                                    <i class="fa-solid fa-square-check"></i>
+                                    {{trans('site.facebookFollowers')}}
                                 </li>
                             </ul>
                         </div>
                         <div class="Instagram" id="Instagram">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span> FInstagram Followers
-                                and Instagram Photo Likes
+                                {{trans('site.Get FREE FInstagram Followers and Instagram Photo Likes')}}
                             </h2>
                             <p class="lh-base">
-                                Instagram is one of the shortest and funniest ways to share
-                                your life events with friends through various pictures.
-                                Makasb will help you to get more Instagram followers and
-                                also likes for your Instagram photos
+                                {{trans('site.insta_is_the_shortest')}}
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i> Instagram
-                                    Followers
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.Instagram_Followers')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> Instagram Photo
-                                    Likes
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.Instagram_PhotoLikes')}}
                                 </li>
                             </ul>
                         </div>
                         <div class="Twitter" id="Twitter">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span> Twitter Followers,
-                                Tweets, reTweets and Likes
+                                {{trans('site.Get_FREE_Twitter_Followers_Tweets_reTweets_and_Likes')}}
                             </h2>
                             <p class="lh-base">
-                                Twitter is one of the greatest ways to keep in touch with
-                                people, to express your feelings, and to be informed of
-                                everything. Consequently, it's crucial for You to be active
-                                on Twitter as much as possible and to have many followers.
+                                {{trans('site.twitter_is_the_greatest')}}
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i> Twitter Followers
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.twitter_followers')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> Twitter Tweets
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.twitter_retweets')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> Twitter Likes
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.twitter_likes')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> Twitter reTweets
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.twitter_tweets')}}
                                 </li>
                             </ul>
                         </div>
                         <div class="YouTube" id="YouTube">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span> YouTube Views,
-                                Subscribers, Likes
+                               {{trans('site.Get FREE YouTube Views, Subscribers, Likes')}}
                             </h2>
                             <p class="lh-base">
-                                If you have a video on the world's biggest video platform:
-                                YouTube, you have also a great chance to promote your video
-                                receiving views, likes and favorites. Makasb gives you also
-                                the opportunity to increase the amount of your YouTube
-                                channel subscribers. And what's the important thing is that
-                                You can get all this for free , with quality and in the
-                                fastest way
+                            {{trans('site.youtube_desc')}}
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i> YouTube Views
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.youtube_views')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> YouTube Subscribe
-                                </li>
-                                <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> YouTube Video
-                                    Likes
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.Youtube Subscribe')}}
                                 </li>
                             </ul>
                         </div>
