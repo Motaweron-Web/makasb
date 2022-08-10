@@ -339,70 +339,69 @@
             <div class="col-lg-6 col-sm-12">
                 <div class="FeaturesBox">
                     <div class="linkSocial">
-                        <button class="mainButton3 active me-5 mb-3 " data-show="Pinterest">Pinterest</button>
-                        <button class="mainButton3  me-5 mb-3 " data-show="SoundCloud">SoundCloud</button>
-                        <button class="mainButton3  me-5 mb-3 " data-show="VK">VK</button>
+                        <button class="mainButton3 active me-5 mb-3 " data-show="Pinterest"> {{trans('site.pinterest')}} </button>
+                        <button class="mainButton3  me-5 mb-3 " data-show="SoundCloud">{{trans('site.soundcloud')}} </button>
+                        <button class="mainButton3  me-5 mb-3 " data-show="VK">{{trans('site.vk')}}</button>
                     </div>
                     <div class="pt-3">
                         <div class="facebook" id="Pinterest">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span> Pinterest Followers and Saves
+                            {{trans('site.get')}}     <span class="social">{{trans('site.free')}}</span> {{trans('site.Pinterest Followers and Saves')}}
                             </h2>
                             <p class="lh-base">
-                                Pinterest is a tool for gathering and arranging things you are fond of. Thousands of people use
-                                Pinterest in their daily life and work. Tastes differ, but no matter, you will find everything you are
-                                interested in there. So hurry up to have lots of Followers and Saves via Makasb.
+                                {{trans('site.Pinterest is a tool for gathering and arranging things you are fond of')}}
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i>Pinterest Followers
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.Pinterest Followers')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i>Pinterest Save
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.Pinterest Save')}}
                                 </li>
                             </ul>
                         </div>
                         <div class="Instagram" id="VK">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span> FInstagram Followers
-                                and Instagram Photo Likes
+                                {{trans('site.get')}} <span class="social">{{trans('site.free')}}</span> {{trans('site.Instagram Followers and Instagram Photo Likes')}}
                             </h2>
                             <p class="lh-base">
-                                As we know, VK (Originally VKontakte, Russian: ВКонтакте) is the second biggest social network in
-                                Europe after Facebook. As one of the famous social networks, it allows users to send public and
-                                private messages to their contacts. Using VK you can create groups, events, and public pages, share
-                                and tag images, audio, and video, and play browser-based games. On Makasb you can get free VK Page
-                                Followers and VK Group Members
+
+                                {{trans('site.As we know, VK (Originally VKontakte, Russian: ВКонтакте) is the second biggest social network in')}}
+
+
+
+
+
+
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i>VK Page Followers
+                                    <i class="fa-solid fa-square-check"></i>
+                                     {{trans('site.VK Page Followers')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> VK Group Members
-                                    Likes
+                                    <i class="fa-solid fa-square-check"></i>
+                                    {{trans('site.VK Group Members Likes')}}
                                 </li>
                             </ul>
                         </div>
                         <div class="Twitter" id="SoundCloud">
                             <h2 class="fs-4">
-                                Get <span class="social">FREE</span>SoundCloud Followers, Likes and Music Plays
+                                {{trans('site.get')}} <span class="social">{{trans('site.free')}}</span> {{trans('site.SoundCloud Followers, Likes and Music Plays')}}
                             </h2>
                             <p class="lh-base">
-                                SoundCloud is the number one social sound platform where you have an opportunity to create your own
-                                sounds and share them with everybody. By recording and uploading sounds to SoundCloud people can
-                                easily share them with their friends and also share with the public: on different blogs, sites, and
-                                social networks. Using Makasb, Here are some features that suggest Makasb for SoundCloud:
+                                {{trans('site.SoundCloud is the number one social sound platform where you have an opportunity to create your own')}}
+
                             </p>
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-square-check"></i> SoundCloud Followers
+                                    <i class="fa-solid fa-square-check"></i>  {{trans('site.SoundCloud Followers')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> SoundCloud Likes
+                                    <i class="fa-solid fa-square-check"></i>  {{trans('site.SoundCloud Likes')}}
                                 </li>
                                 <li class="mt-2">
-                                    <i class="fa-solid fa-square-check"></i> SoundCloud Music Plays
+                                    <i class="fa-solid fa-square-check"></i> {{trans('site.SoundCloud Music Plays')}}
                                 </li>
                             </ul>
                         </div>
@@ -422,30 +421,26 @@
             <div class="col-lg-6 col-sm-12">
                 <div class="coinsBox">
                     <h3 class="fs-4 lh-base">
-                        Easily Exchange Your Makasb Points for Valuable AMF Tokens - Do
-                        This TODAY Before Value Skyrockets
+                        {{trans('site.Easily Exchange Your Makasb Points for Valuable AMF Tokens - Do This TODAY Before Value Skyrockets')}}
+
                     </h3>
                     <p class="lh-base text-black-50">
-                        The world is rapidly transitioning to borderless cryptocurrency.
-                        Millions of people in countless countries now prefer to buy,
-                        pay, and invest in smart crypto that keeps their identity
-                        private and secure.
+                        {{trans('site.The world is rapidly transitioning to borderless cryptocurrency.')}}
+
                     </p>
                 </div>
                 <div class="coinsBox pt-3">
                     <h3 class="fs-4 lh-base">
-                        Makasb has made our new AMF Tokens extremely EASY to buy and
-                        use.
+                         {{trans('site.Makasb has made our new AMF Tokens extremely EASY to buy and use.')}}
+
                     </h3>
                     <p class="lh-base text-black-50">
-                        Tokens will rapidly increase in value as they are hotly promoted
-                        on social media, via email, and many other channels. This is
-                        your chance to get in on the ground floor of what may become a
-                        historic investment opportunity.
+                        {{trans('site.Tokens will rapidly increase in value as they are hotly promoted')}}
+
                     </p>
                 </div>
                 <button class="mainButton mb-5 mt-lg-3">
-                    <a href="Registration.html">Registration</a>
+                    <a href="Registration.html">{{trans('site.Registration')}} </a>
                 </button>
             </div>
         </div>

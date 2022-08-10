@@ -243,18 +243,36 @@ There are limits depending on Twitter user for all Twitter features. Therefore, 
     'Instagram_PhotoLikes'=>'Instagram Photo Likes',
     'youtube_desc'=>' If you have a video on the worlds biggest video platform: YouTube, you have also a great chance to promote your video receiving views, likes and favorites. Makasb gives you also the opportunity to increase the amount of your YouTube channel subscribers. And whats the important thing is that You can get all this for free , with quality and in the fastest way',
 
+     'pinterest'=>'Pinterest',
+    'vk'=>'VK',
+   'get'=>'Get',
+
+    'free'=>'FREE',
+    'Pinterest Followers and Saves'=>'Pinterest Followers and Saves',
+    'Pinterest is a tool for gathering and arranging things you are fond of'=>'Pinterest is a tool for gathering and arranging things you are fond of. Thousands of people use Pinterest in their daily life and work. Tastes differ, but no matter, you will find everything you are interested in there. So hurry up to have lots of Followers and Saves via Makasb.',
+    'Pinterest Save'=>'Pinterest Save',
+    'As we know, VK (Originally VKontakte, Russian: ВКонтакте) is the second biggest social network in'=>'As we know, VK (Originally VKontakte, Russian: ВКонтакте) is the second biggest social network in
+                                Europe after Facebook. As one of the famous social networks, it allows users to send public and
+                                private messages to their contacts. Using VK you can create groups, events, and public pages, share
+                                and tag images, audio, and video, and play browser-based games. On Makasb you can get free VK Page
+                                Followers and VK Group Members',
+    'VK Page Followers'=>'VK Page Followers',
+    'VK Group Members Likes'=>'VK Group Members Likes',
+    'SoundCloud Followers, Likes and Music Plays'=>'SoundCloud Followers, Likes and Music Plays',
+    'SoundCloud is the number one social sound platform where you have an opportunity to create your own'=>'SoundCloud is the number one social sound platform where you have an opportunity to create your own sounds and share them with everybody. By recording and uploading sounds to SoundCloud people can easily share them with their friends and also share with the public: on different blogs, sites, and social networks. Using Makasb, Here are some features that suggest Makasb for SoundCloud:',
+
+    'SoundCloud Followers'=>'SoundCloud Followers',
 
 
+    'SoundCloud Music Plays'=>'SoundCloud Music Plays',
 
-
-
-
-
-
-
-
-
-
+  'Easily Exchange Your Makasb Points for Valuable AMF Tokens - Do This TODAY Before Value Skyrockets'=>'Easily Exchange Your Makasb Points for Valuable AMF Tokens - Do This TODAY Before Value Skyrockets',
+'The world is rapidly transitioning to borderless cryptocurrency.'=>'The world is rapidly transitioning to borderless cryptocurrency.
+                        Millions of people in countless countries now prefer to buy,
+                        pay, and invest in smart crypto that keeps their identity
+                        private and secure.',
+    'Makasb has made our new AMF Tokens extremely EASY to buy and use.'=>'Makasb has made our new AMF Tokens extremely EASY to buy and use.',
+'Tokens will rapidly increase in value as they are hotly promoted'=>'Tokens will rapidly increase in value as they are hotly promoted on social media, via email, and many other channels. This is your chance to get in on the ground floor of what may become a historic investment opportunity.',
     ####### MySites
     'how_site' => 'How to add your site?',
 
